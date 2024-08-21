@@ -4,37 +4,54 @@ using Dapper;
 public class BD{
     private static string _connectionString = @"Server=localhost; DataBase=PREGUNTADOS; Trusted_Connection=True;";
 
-    public static ObtenerCategorias()
+    public static List<Categorias> ObtenerCategorias()
     {
         string query = "SELECT * FROM Categorias";
-        List<Categorias> Categorias = null;
+        List<Categorias> Categoria = null;
         using(SqlConnection db = new SqlConnection(_connectionString)){
-            Categorias = db.QueryFirstOrDefault<Categorias>(query);
+            Categoria = db.Query<Categorias>(query).ToList();
         } 
+
+        return Categoria;
     }
 
-    public static ObtenerDificultades()
+    public static List<Dificultades> ObtenerDificultades()
     {
         string query = "SELECT * FROM Dificultades";
-        List<Dificultades> Dificultades = null;
+        List<Dificultades> Dificultad = null;
         using(SqlConnection db = new SqlConnection(_connectionString)){
-            Dificultades = db.QueryFirstOrDefault<Dificultades>(query);
+            Dificultad = db.Query<Dificultades>(query).ToList();
         } 
+
+        return Dificultad;
     }
 
-    public static ObtenerDificultades(int Dificultad, int Categorias){
+    public static List<Preguntas> ObtenerDificultades(int Dificultad, int Categorias){
         string query = "SELECT * FROM Preguntas INNER JOIN Dificultades ON Preguntas.IdDificultad = Preguntas.IdDificultad INNER JOIN Categorias ON Preguntas.IdCategoria = Categorias.IdCategoria WHERE IdDificultad = @idDificultad AND IdCategoria = @idCategoria";
-        List<Preguntas> Preguntas = null;
+        List<Preguntas> Pregunta = null;
         using(SqlConnection db = new SqlConnection(_connectionString)){
-            Preguntas = db.QueryFirstOrDefault<Preguntas>(query, new{idDificultad = Dificultad}, new{IdCategoria = Categorias});
+            Pregunta = db.Query<Preguntas>(query, new{idDificultad = Dificultad, IdCategoria = Categorias}).ToList();
         } 
+
+        return Pregunta;
     }
 
-    public static ObtenerRespuestas(List<Preguntas> Preguntas){
-        string query = "SELECT * FROM Respuestas INNER JOIN Preguntas ON Preguntas.IdPregunta = Respuesta.IdPregunta WHERE IdPregunta = @id";
-        List<Respuestas> Respuestaas = null;
-        using(SqlConnection db = new SqlConnection(_connectionString)){
-            Preguntas = db.QueryFirstOrDefault<Preguntas>(query, new{IdPregunta = Preguntas.IdPregunta});
-        } 
-    } 
+    public static List<Respuestas> ObtenerRespuestas(List<Preguntas> Preguntas)
+    {
+        List<Respuestas> Respuesta = new List<Respuestas>();
+        string query = "SELECT * FROM Respuestas INNER JOIN Preguntas ON Preguntas.IdPregunta = Respuestas.IdPregunta WHERE Respuestas.IdPregunta = @id";
+        
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            foreach (Preguntas pregunta in Preguntas)
+            {
+                List<Respuestas> respuestasPorPregunta = db.Query<Respuestas>(query, new { id = pregunta.IdPregunta }).ToList();
+                Respuesta.AddRange(respuestasPorPregunta);
+
+                Console.WriteLine(respuestasPorPregunta);
+            }
+        }
+
+        return Respuesta;
+    }
 }

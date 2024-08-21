@@ -11,8 +11,8 @@ public static class Juego{
         CantidadPreguntasCorrectas = 0;
     }
 
-    static List<Categorias> ObtenerCategoriais(){
-        return BD.ObtenerCategoriais();
+    static List<Categorias> ObtenerCategorias(){
+        return BD.ObtenerCategorias();
     }
 
     static List<Dificultades> ObtenerDificultades(){
