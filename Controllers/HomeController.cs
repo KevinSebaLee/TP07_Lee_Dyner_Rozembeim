@@ -30,6 +30,8 @@ public class HomeController : Controller
     public IActionResult Jugar(){
         ViewBag.PreguntaActual = Juego.ObtenerProximaPregunta();
         ViewBag.RespuestaPregunta = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.IdPregunta);
+
+        return View("Juego");
     }
 
     public IActionResult Comenzar(string Username, int Dificultad, int Categoria)
@@ -40,7 +42,7 @@ public class HomeController : Controller
             return RedirectToAction("ConfigurarJuego");
         }
         else{
-            return RedirectToACtion("Jugar");
+            return RedirectToAction("Jugar");
         }
     }
 }

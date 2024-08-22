@@ -1,13 +1,13 @@
 public static class Juego{
-    static string Username {get; set;}
-    static int PuuntajeActual {get; set;}
-    static int CantidadPreguntasCorrectas {get; set;}
-    static List<Preguntas> Pregunta {get; set;}
-    static List<Respuestas> Respuesta {get; set;}
+    private static string Username {get; set;}
+    private static int PuntajeActual {get; set;}
+    private static int CantidadPreguntasCorrectas {get; set;}
+    public static List<Preguntas> Pregunta {get; set;}
+    public static List<Respuestas> Respuesta {get; set;}
 
     public static void InicializarJuego(){
         Username = null;
-        PuuntajeActual = 0;
+        PuntajeActual = 0;
         CantidadPreguntasCorrectas = 0;
     }
 
@@ -32,12 +32,20 @@ public static class Juego{
     }
 
     public static List<Respuestas> ObtenerProximasRespuestas(int idPregunta){
-        return Respuesta[idPregunta];
+        List<Respuestas> PosiblesRespuestas = new List<Respuestas>();
+
+        foreach (Respuestas respuesta in Respuesta) {
+            if (respuesta.IdPregunta == idPregunta) {
+                PosiblesRespuestas.Add(respuesta);
+            }
+        }
+
+        return PosiblesRespuestas;
     }
 
     public static bool VerificarRespuesta(int idPregunta, int idRespuesta){
-        if(Pregunta(idRespuesta).IdRespuesta == Respuesta(idRespuesta).IdRespuesta){
-            PuuntajeActual++;
+        if(Pregunta[idPregunta].IdPregunta == Respuesta[idPregunta].IdPregunta){
+            PuntajeActual++;
             Pregunta.RemoveAt(idPregunta);
             Pregunta.RemoveAt(idRespuesta);
 
