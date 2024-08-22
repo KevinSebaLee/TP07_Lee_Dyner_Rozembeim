@@ -17,4 +17,30 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    public IActionResult ConfigurarJuego()
+    {
+        Juego.InicializarJuego();
+        ViewBag.Dificultades = Juego.ObtenerDificultades();
+        ViewBag.Categorias = Juego.ObtenerCategorias();
+
+        return View();
+    }
+
+    public IActionResult Jugar(){
+        ViewBag.PreguntaActual = Juego.ObtenerProximaPregunta();
+        ViewBag.RespuestaPregunta = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.IdPregunta);
+    }
+
+    public IActionResult Comenzar(string Username, int Dificultad, int Categoria)
+    {
+        Juego.CargarPartidas(Username, Dificultad, Categoria);
+
+        if(!(Juego.Pregunta == null)){
+            return RedirectToAction("ConfigurarJuego");
+        }
+        else{
+            return RedirectToACtion("Jugar");
+        }
+    }
 }

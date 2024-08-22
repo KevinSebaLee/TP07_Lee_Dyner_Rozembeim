@@ -502,23 +502,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\devandroid\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\48044115\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\devandroid\\Desktop\\Preguntados\\Preguntados.csproj",
+      "projectUniqueName": "C:\\Users\\48044115\\Desktop\\TP07_Lee_Dyner_Rozembeim\\Preguntados.csproj",
       "projectName": "Preguntados",
-      "projectPath": "C:\\Users\\devandroid\\Desktop\\Preguntados\\Preguntados.csproj",
-      "packagesPath": "C:\\Users\\devandroid\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\devandroid\\Desktop\\Preguntados\\obj\\",
+      "projectPath": "C:\\Users\\48044115\\Desktop\\TP07_Lee_Dyner_Rozembeim\\Preguntados.csproj",
+      "packagesPath": "C:\\Users\\48044115\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\48044115\\Desktop\\TP07_Lee_Dyner_Rozembeim\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\devandroid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\48044115\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
