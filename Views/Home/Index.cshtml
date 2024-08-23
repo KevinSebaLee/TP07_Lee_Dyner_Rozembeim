@@ -1,8 +1,9 @@
-﻿<div class="IndexFondo" style="height: 100vh">
+﻿<div class="IndexFondo d-flex align-items-center text-center" style="height: 100vh">
     <div class="container">
-        <div class="row d-flex justify-content-center text-center">
-            <h1 class="text-white" style="font-size: calc(2.7rem + 3vw)">PREGUNTADOS</h1>
+        <img src="~/img/Logo.webp">
+        <h1 class="text-white" style="font-size: calc(2.7rem + 3vw)">PREGUNTADOS</h1>
+        <form action='@Url.Action("ConfigurarJuego")'>
             <button type="submit" class="btn btn-primary bg-warning border border-warning" style="border-radius: 25px; width: 20vw; height: 8vh;"><h2>Jugar</h2></button>
-        </div>
+        </form>
     </div>
 </div>
