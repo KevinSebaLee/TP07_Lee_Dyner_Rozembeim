@@ -1,22 +1,24 @@
 const wheel = document.getElementById("wheel");
 const spinBtn = document.getElementById("spin-btn");
 const finalValue = document.getElementById("final-value");
+const IrAlJuego = document.getElementById("button");
+var CategoriaTocada = document.getElementById("categorias");
+
+IrAlJuego.style.visibility = "hidden";
+
 const rotationValues = [
-  { minDegree: 0, maxDegree: 30, value: 2 },
-  { minDegree: 31, maxDegree: 90, value: 1 },
-  { minDegree: 91, maxDegree: 150, value: 6 },
-  { minDegree: 151, maxDegree: 210, value: 5 },
-  { minDegree: 211, maxDegree: 270, value: 4 },
-  { minDegree: 271, maxDegree: 330, value: 3 },
-  { minDegree: 331, maxDegree: 360, value: 2 },
+  { minDegree: 0, maxDegree: 120, value: "Decada 2000" },
+  { minDegree: 121, maxDegree: 240, value: "Futbol Europeo" },
+  { minDegree: 241, maxDegree: 360, value: "Futbol Sudamericano" }
 ];
-const data = [16, 16, 16, 16, 16, 16];
-const pieColors = ["#8b35bc", "#b163da", "#8b35bc", "#b163da", "#8b35bc", "#b163da"];
+
+const data = [33.3, 33.3, 33.3];
+const pieColors = ["#00aae4", "#ffd200", "#ff6961"];
 let myChart = new Chart(wheel, {
   plugins: [ChartDataLabels],
   type: "pie",
   data: {
-    labels: [1, 2, 3, 4, 5, 6],
+    labels: ["Futbol Europeo", "Futbol Sudamericano", "Decada 2000"],
     datasets: [
       {
         backgroundColor: pieColors,
@@ -35,25 +37,40 @@ let myChart = new Chart(wheel, {
       datalabels: {
         color: "#ffffff",
         formatter: (_, context) => context.chart.data.labels[context.dataIndex],
-        font: { size: 24 },
+        font: { size: 17 },
       },
     },
   },
 });
+
+let optionChosen;
+let touchedBtn = false;
+
 const valueGenerator = (angleValue) => {
   for (let i of rotationValues) {
     if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
-      finalValue.innerHTML = `<p>Value: ${i.value}</p>`;
-      spinBtn.disabled = false;
+      finalValue.innerHTML = `<p>Categoria: ${i.value}</p>`;
+      CategoriaTocada = i.value;
+
+      
+
+      optionChosen = i.value;
+      if(touchedBtn){
+        spinBtn.disabled = true;
+      }
+      else{
+        spinBtn.disabled = false;
+      }
       break;
     }
   }
 };
+
 let count = 0;
 let resultValue = 101;
 spinBtn.addEventListener("click", () => {
+  touchedBtn = true;
   spinBtn.disabled = true;
-  finalValue.innerHTML = `<p>Good Luck!</p>`;
   let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
   let rotationInterval = window.setInterval(() => {
     myChart.options.rotation = myChart.options.rotation + resultValue;
@@ -69,4 +86,8 @@ spinBtn.addEventListener("click", () => {
       resultValue = 101;
     }
   }, 10);
+
+  setTimeout(() => {
+    IrAlJuego.style.visibility = "visible";
+  }, 2000);
 });

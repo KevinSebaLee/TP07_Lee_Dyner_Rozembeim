@@ -3,3 +3,17 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.FinFondo{
+  background-image: url("../img/FinBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Boton-Index{
+  transition: all 0.5s ease-out !important;
+}
+
+.Boton-Index:hover{
+  transform: scale(1.2);
+}

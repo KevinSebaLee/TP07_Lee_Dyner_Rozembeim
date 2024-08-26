@@ -1,13 +1,22 @@
-<head><link rel="stylesheet" href="~/css/ruleta.css" asp-append-version="true" /></head>
+
+
+<head><link rel="stylesheet" href="~/css/ruleta.css" asp-append-version="true"/></head>
 
 <div class="wrapper">
     <div class="container">
         <canvas id="wheel"></canvas>
-        <button id="spin-btn">Spin</button>
-        <img src="spinner-arrow-.svg" alt="spinner-arrow" />
+        <button id="spin-btn">Girar</button>
+        <img class="me-4" src="~/img/Arrow.png" alt="spinner-arrow" />
     </div>
     <div id="final-value">
-        <p>Click On The Spin Button To Start</p>
+        <p>Aprete el boton para obtener su categoria</p>
+    </div>
+
+    <div id="button">
+        <form action='@Url.Action("Comenzar")' class="text-center">
+            <input type="hidden" name="Categoria" id="categorias">
+            <button type="submit" class="btn btn-primary bg-warning border border-warning" style="border-radius: 25px; width: 10vw; height: 5vh;">Jugar</button>
+        </form>
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\48044115\\Desktop\\TP07_Lee_Dyner_Rozembeim\\Preguntados.csproj": {}
+    "C:\\Users\\48044115\\Desktop\\Branch_Kevin\\Preguntados.csproj": {}
   },
   "projects": {
-    "C:\\Users\\48044115\\Desktop\\TP07_Lee_Dyner_Rozembeim\\Preguntados.csproj": {
+    "C:\\Users\\48044115\\Desktop\\Branch_Kevin\\Preguntados.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\48044115\\Desktop\\TP07_Lee_Dyner_Rozembeim\\Preguntados.csproj",
+        "projectUniqueName": "C:\\Users\\48044115\\Desktop\\Branch_Kevin\\Preguntados.csproj",
         "projectName": "Preguntados",
-        "projectPath": "C:\\Users\\48044115\\Desktop\\TP07_Lee_Dyner_Rozembeim\\Preguntados.csproj",
+        "projectPath": "C:\\Users\\48044115\\Desktop\\Branch_Kevin\\Preguntados.csproj",
         "packagesPath": "C:\\Users\\48044115\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\48044115\\Desktop\\TP07_Lee_Dyner_Rozembeim\\obj\\",
+        "outputPath": "C:\\Users\\48044115\\Desktop\\Branch_Kevin\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -77,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
