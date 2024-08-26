@@ -56,3 +56,82 @@ insert into Preguntas(IdCategoria,IdDificultad,Enunciado,Foto) VALUES (4,3,'¿Qu
 insert into Preguntas(IdCategoria,IdDificultad,Enunciado,Foto) VALUES (4,3,'¿Cuál es el único club que ha ganado la Liga de Campeones de la UEFA sin perder un solo partido en la fase de grupos y la fase eliminatoria en una temporada?','https://estaticos-cdn.prensaiberica.es/clip/e6898958-167a-47a1-8b26-83890a0d17d7_alta-libre-aspect-ratio_default_0.jpg');
 insert into Preguntas(IdCategoria,IdDificultad,Enunciado,Foto) VALUES (4,3,'¿Qué equipo fue el primero en ganar el triplete (Liga, Copa y Liga de Campeones) en una sola temporada?','https://www.mundodeportivo.com/files/image_449_220/uploads/2017/03/09/60e76b85b02cc.jpeg');
 insert into Preguntas(IdCategoria,IdDificultad,Enunciado,Foto) VALUES (4,3,'¿Cuál es el estadio con mayor capacidad en Europa?','https://www.vipealo.com/blog/wp-content/uploads/2022/02/AdobeStock_315861649-1.jpeg');
+
+
+
+
+
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (1,1,'Liga de Campeones de la UEFA',1,'https://www.ole.com.ar/2019/05/08/RxAcoR1ih_720x.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (1,2,'Liga Europa',0,'https://www.ole.com.ar/2019/05/08/RxAcoR1ih_720x.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (1,3,'Copa Intercontinental',0,'https://www.ole.com.ar/2019/05/08/RxAcoR1ih_720x.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (1,4,'Copa del Mundo de Clubes',0,'https://www.ole.com.ar/2019/05/08/RxAcoR1ih_720x.jpg');
+
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (2,1,'Portugal',1,'https://images.pagina12.com.ar/styles/focal_3_2_960x540/public/2020-07/na01fo02.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (2,2,'Francia',0,'https://images.pagina12.com.ar/styles/focal_3_2_960x540/public/2020-07/na01fo02.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (2,3,'España',0,'https://images.pagina12.com.ar/styles/focal_3_2_960x540/public/2020-07/na01fo02.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (2,4,'Alemania',0,'https://images.pagina12.com.ar/styles/focal_3_2_960x540/public/2020-07/na01fo02.jpg');
+
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (3,1,'Juventus',1,'https://image.spreadshirtmedia.com/image-server/v1/products/T1401A1MPA3249PT17X21Y28D1188427133FS1944/views/1');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (3,2,'AC Milan',0,'https://image.spreadshirtmedia.com/image-server/v1/products/T1401A1MPA3249PT17X21Y28D1188427133FS1944/views/1');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (3,3,'Inter de Milán',0,'https://image.spreadshirtmedia.com/image-server/v1/products/T1401A1MPA3249PT17X21Y28D1188427133FS1944/views/1');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (3,4,'Roma',0,'https://image.spreadshirtmedia.com/image-server/v1/products/T1401A1MPA3249PT17X21Y28D1188427133FS1944/views/1');
+
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (4,1,'Alemania',1,'https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_600,w_600/v1555926348/2018/04/12/01/nl8h4fjpa41o5v71fxtz.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (4,2,'Francia',0,'https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_600,w_600/v1555926348/2018/04/12/01/nl8h4fjpa41o5v71fxtz.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (4,3,'España',0,'https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_600,w_600/v1555926348/2018/04/12/01/nl8h4fjpa41o5v71fxtz.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (4,4,'Italia',0,'https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_600,w_600/v1555926348/2018/04/12/01/nl8h4fjpa41o5v71fxtz.jpg');
+
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (5,1,'España',1,'https://fotografias.larazon.es/clipping/cmsimages02/2010/07/12/53CDCB58-BCFE-4295-AE11-9C0C1C4A0FF9/34.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (5,2,'Alemania',0,'https://fotografias.larazon.es/clipping/cmsimages02/2010/07/12/53CDCB58-BCFE-4295-AE11-9C0C1C4A0FF9/34.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (5,3,'Italia',0,'https://fotografias.larazon.es/clipping/cmsimages02/2010/07/12/53CDCB58-BCFE-4295-AE11-9C0C1C4A0FF9/34.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (5,4,'Francia',0,'https://fotografias.larazon.es/clipping/cmsimages02/2010/07/12/53CDCB58-BCFE-4295-AE11-9C0C1C4A0FF9/34.jpg');
+
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (6,1,'Cristiano Ronaldo',1,'https://editorial.uefa.com/resources/0246-0e98e0aed5a5-5cfc63152474-1000/maximum-scorer.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (6,2,'Lionel Messi',0,'https://editorial.uefa.com/resources/0246-0e98e0aed5a5-5cfc63152474-1000/maximum-scorer.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (6,3,'Raúl González',0,'https://editorial.uefa.com/resources/0246-0e98e0aed5a5-5cfc63152474-1000/maximum-scorer.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (6,4,'Robert Lewandowski',0,'https://editorial.uefa.com/resources/0246-0e98e0aed5a5-5cfc63152474-1000/maximum-scorer.jpg');
+
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (7,1,'Manchester City',1,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQMYCKz5joGiEpzDnh5OjclMB2D5Uj7gLg1A&usqp=CAU');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (7,2,'Liverpool',0,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQMYCKz5joGiEpzDnh5OjclMB2D5Uj7gLg1A&usqp=CAU');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (7,3,'Chelsea',0,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQMYCKz5joGiEpzDnh5OjclMB2D5Uj7gLg1A&usqp=CAU');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (7,4,'Manchester United',0,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQMYCKz5joGiEpzDnh5OjclMB2D5Uj7gLg1A&usqp=CAU');
+
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (8,1,'Atlético de Madrid',1,'https://imagenes.20minutos.es/files/image_640_300/uploads/imagenes/2020/01/16/el-atleti.jpeg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (8,2,'Real Madrid',0,'https://imagenes.20minutos.es/files/image_640_300/uploads/imagenes/2020/01/16/el-atleti.jpeg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (8,3,'Barcelona',0,'https://imagenes.20minutos.es/files/image_640_300/uploads/imagenes/2020/01/16/el-atleti.jpeg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (8,4,'Valencia',0,'https://imagenes.20minutos.es/files/image_640_300/uploads/imagenes/2020/01/16/el-atleti.jpeg');
+
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (9,1,'Robert Lewandowski',1,'https://i.pinimg.com/originals/f1/74/64/f117464398cf80d35f1e64cb5b35a021.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (9,2,'Karim Benzema',0,'https://i.pinimg.com/originals/f1/74/64/f117464398cf80d35f1e64cb5b35a021.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (9,3,'Lionel Messi',0,'https://i.pinimg.com/originals/f1/74/64/f117464398cf80d35f1e64cb5b35a021.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (9,4,'Vinícius Jr.',0,'https://i.pinimg.com/originals/f1/74/64/f117464398cf80d35f1e64cb5b35a021.jpg');
+
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (10,1,'Inter de Milán',1,'https://imagenes.daznservices.com/di/library/DAZN_New/Z9/M0/internazionale-champions-league_1dazl3zibkc5j11pzzhc8arj0z.jpg?t=1399998653');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (10,2,'Juventus',0,'https://imagenes.daznservices.com/di/library/DAZN_New/Z9/M0/internazionale-champions-league_1dazl3zibkc5j11pzzhc8arj0z.jpg?t=1399998653');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (10,3,'AC Milan',0,'https://imagenes.daznservices.com/di/library/DAZN_New/Z9/M0/internazionale-champions-league_1dazl3zibkc5j11pzzhc8arj0z.jpg?t=1399998653');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (10,4,'Roma',0,'https://imagenes.daznservices.com/di/library/DAZN_New/Z9/M0/internazionale-champions-league_1dazl3zibkc5j11pzzhc8arj0z.jpg?t=1399998653');
+
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (11,1,'Cristiano Ronaldo',1,'https://upload.wikimedia.org/wikipedia/en/thumb/a/aa/UEFA.svg/1024px-UEFA.svg.png');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (11,2,'Lionel Messi',0,'https://upload.wikimedia.org/wikipedia/en/thumb/a/aa/UEFA.svg/1024px-UEFA.svg.png');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (11,3,'Robert Lewandowski',0,'https://upload.wikimedia.org/wikipedia/en/thumb/a/aa/UEFA.svg/1024px-UEFA.svg.png');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (11,4,'Zinedine Zidane',0,'https://upload.wikimedia.org/wikipedia/en/thumb/a/aa/UEFA.svg/1024px-UEFA.svg.png');
+
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (12,1,'100 puntos (Manchester City, 2017-2018)',1,'https://editorial.uefa.com/resources/0246-0e98e0aed5a5-5cfc63152474-1000/maximum-scorer.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (12,2,'98 puntos',0,'https://editorial.uefa.com/resources/0246-0e98e0aed5a5-5cfc63152474-1000/maximum-scorer.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (12,3,'96 puntos',0,'https://editorial.uefa.com/resources/0246-0e98e0aed5a5-5cfc63152474-1000/maximum-scorer.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (12,4,'102 puntos',0,'https://editorial.uefa.com/resources/0246-0e98e0aed5a5-5cfc63152474-1000/maximum-scorer.jpg');
+
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (13,1,'Real Madrid',1,'https://www.ole.com.ar/2019/05/08/RxAcoR1ih_720x.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (13,2,'AC Milan',0,'https://www.ole.com.ar/2019/05/08/RxAcoR1ih_720x.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (13,3,'Barcelona',0,'https://www.ole.com.ar/2019/05/08/RxAcoR1ih_720x.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (13,4,'Inter de Milán',0,'https://www.ole.com.ar/2019/05/08/RxAcoR1ih_720x.jpg');
+
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (14,1,'Celtic FC (1966-1967)',1,'https://www.mundodeportivo.com/files/image_449_220/2020/10/01/607d4e6e77b3e1e/pg-siete-triples-champions-legue-gettyimages-583246998.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (14,2,'Inter de Milán',0,'https://www.mundodeportivo.com/files/image_449_220/2020/10/01/607d4e6e77b3e1e/pg-siete-triples-champions-legue-gettyimages-583246998.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (14,3,'Barcelona',0,'https://www.mundodeportivo.com/files/image_449_220/2020/10/01/607d4e6e77b3e1e/pg-siete-triples-champions-legue-gettyimages-583246998.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (14,4,'Manchester United',0,'https://www.mundodeportivo.com/files/image_449_220/2020/10/01/607d4e6e77b3e1e/pg-siete-triples-champions-legue-gettyimages-583246998.jpg');
+
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (15,1,'Estadio de Wembley',1,'https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/05/15/16/wembley1505a.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (15,2,'Camp Nou',0,'https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/05/15/16/wembley1505a.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (15,3,'Allianz Arena',0,'https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/05/15/16/wembley1505a.jpg');
+insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (15,4,'San Siro',0,'https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/05/15/16/wembley1505a.jpg');
