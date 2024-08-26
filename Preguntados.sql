@@ -18,7 +18,7 @@ CREATE TABLE Preguntas(
     IdCategoria INT NOT NULL FOREIGN KEY REFERENCES Categorias(IdCategoria),
     IdDificultad INT NOT NULL FOREIGN KEY REFERENCES Dificultades(IdDificultad),
     Enunciado VARCHAR(200) NOT NULL,
-    Foto TEXT NOT NULL
+    Foto TEXT
 );
 
 CREATE TABLE Respuestas(
@@ -27,7 +27,7 @@ CREATE TABLE Respuestas(
     Opcion INT NOT NULL,
     Contenido VARCHAR(200) NOT NULL,
     Correcta BIT NOT NULL,
-    Foto TEXT NOT NULL
+    Foto TEXT
 );
 INSERT INTO Dificultades (Nombre) VALUES ('Facil');
 INSERT INTO Dificultades (Nombre) VALUES ('Medio');
@@ -188,3 +188,49 @@ insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto)
 VALUES (5, 3, '¿En qué año fue fundada la Confederación Sudamericana de Fútbol (CONMEBOL)?', 'https://cdn.conmebol.com/wp-content/uploads/2018/02/logo-conmebol-750px-azul_25.jpg');
 
 
+-- Pregunta 1: ¿Qué país ha ganado más veces la Copa América?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) 
+values (1, 1, 'Uruguay', 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgCZF9p58LH4tpMChcVQr8GkmmvXQHqbMfRw&s');
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) 
+values (1, 2, 'Brasil', 0, 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png');
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) 
+values (1, 3, 'Argentina', 0, 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/1200px-Flag_of_Argentina.svg.png');
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) 
+values (1, 4, 'Chile', 0, 'https://www.shutterstock.com/image-illustration/flag-chile-chilean-on-fabric-260nw-2452772195.jpg');
+
+-- Pregunta 2: ¿Cuál es el apodo de la selección de Argentina?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (2, 1, 'La Albiceleste', 1),
+ (2, 2, 'La Celeste', 0),
+ (2, 3, 'La Vinotinto', 0),
+ (2, 4, 'La Roja', 0);
+
+-- Pregunta 3: ¿En qué país se encuentra el estadio Maracaná?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) 
+values (3, 1, 'Brasil', 1, 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png');
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) 
+values (3, 2, 'Argentina', 0, 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/1200px-Flag_of_Argentina.svg.png');
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) 
+values (3, 3, 'Uruguay', 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgCZF9p58LH4tpMChcVQr8GkmmvXQHqbMfRw&s');
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) 
+values (3, 4, 'Chile', 0, 'https://www.shutterstock.com/image-illustration/flag-chile-chilean-on-fabric-260nw-2452772195.jpg');
+
+-- Pregunta 4: ¿Qué club es conocido como "Los Millonarios"?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) 
+values (4, 1, 'River Plate', 1, 'https://marcadegol.com/fotos//2022/08/review-camiseta-titular-adidas-de-river-plate-2022-2023-header.jpg');
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) 
+values (4, 2, 'Boca Juniors', 0, 'https://i.pinimg.com/736x/1a/89/81/1a8981aa5dd5b9e88002735337855cf7.jpg');
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) 
+values (4, 3, 'Flamengo', 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG0yGdbDJ_9XVM1yzUcYRS7BYOJgFdrAexHQ&s');
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) 
+values (4, 4, 'Santos', 0, 'https://i.pinimg.com/originals/d7/91/32/d791327c772ef6e28c236987a6917c69.png');
+
+-- Pregunta 5: ¿Qué selección ganó la Copa del Mundo en 2002?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) 
+values (5, 1, 'Brasil', 1, 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png');
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) 
+values (5, 2, 'Argentina', 0, 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/1200px-Flag_of_Argentina.svg.png');
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) 
+values (5, 3, 'Uruguay', 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgCZF9p58LH4tpMChcVQr8GkmmvXQHqbMfRw&s');
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) 
+values (5, 4, 'Paraguay', 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxrhYErTq1Y66xzYcojWuiMuHGxuuLfVGNXw&s');
