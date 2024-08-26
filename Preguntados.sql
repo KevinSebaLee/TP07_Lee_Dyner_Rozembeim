@@ -135,3 +135,56 @@ insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (15,1,'
 insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (15,2,'Camp Nou',0,'https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/05/15/16/wembley1505a.jpg');
 insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (15,3,'Allianz Arena',0,'https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/05/15/16/wembley1505a.jpg');
 insert into Respuestas(IdPregunta,Opcion,Contenido,Correcta,Foto) values (15,4,'San Siro',0,'https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/05/15/16/wembley1505a.jpg');
+
+
+
+
+-- Preguntas fáciles
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) 
+VALUES (5, 1, '¿Qué país ha ganado más veces la Copa América?', 'https://assets.goal.com/images/v3/blt68ada127a483d571/Trofeo-Copa-America-%EF%BF%BD-CONMEBOL-9807.jpg?auto=webp&format=pjpg&width=3840&quality=60');
+
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) 
+VALUES (5, 1, '¿Cuál es el apodo de la selección de Argentina?', 'https://resizer.glanacion.com/resizer/v2/la-sede-de-la-5ITMJC27YJG3BBZATTJ4GCOUJA.jpg?auth=8f34b0a70c668152cdec2c29645215b9016933cab86e518f6792cc66c8ce866c&width=768&quality=70&smart=false');
+
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) 
+VALUES (5, 1, '¿En qué país se encuentra el estadio Maracaná?', 'https://www.tangol.com/blog/Fotos/maracana-stadium-in-the-city-of-rio-de-janeiro-you-will-love-it_0_201806251313430.JPG');
+
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) 
+VALUES (5, 1, '¿Qué club es conocido como "Los Millonarios"?', 'https://media.tycsports.com/files/2023/02/12/533839/monumental_1440x810_wmk.webp');
+
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) 
+VALUES (5, 1, '¿Qué selección ganó la Copa del Mundo en 2002?', 'https://cdn.forbes.com.mx/2022/12/rhett-lewis-bdJ8Kxaz-mQ-unsplash-e1671492402841.jpg');
+
+-- Preguntas de dificultad media
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) 
+VALUES (5, 2, '¿Quién es el máximo goleador histórico de la selección uruguaya?', 'https://s.yimg.com/ny/api/res/1.2/Xpi7ar.anBFqAGKmAZGJRg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/es/efe.es/43053e7422ddc1bcd7554f44e275384a');
+
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) 
+VALUES (5, 2, '¿En qué año ganó River Plate su primera Copa Libertadores?', 'https://cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/2C7G6LZHR5C33F4VCXGD5MMIVM.jpg');
+
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) 
+VALUES (5, 2, '¿Cuál es el máximo goleador de la historia de la Copa Libertadores?', 'https://elcordillerano-s3.cdn.net.ar/s3i233/2024/06/elcordillerano/images/83/33/833361_2984b6c611efdaf4f2533e89f2fd66d374e3932c1af80284b053e195c2dbe0cd/lg.webp');
+
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) 
+VALUES (5, 2, '¿Qué club ganó la Copa Sudamericana en 2022?', 'https://pxcdn.0223.com.ar/f/042024/1712770857923.webp?cw=748&ch=420&cma=1&extw=jpeg');
+
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) 
+VALUES (5, 2, '¿Quién fue el entrenador de la selección chilena que ganó la Copa América en 2015?', 'https://files.antena2.com/antena2/public/2023-10/selecciondechile_1_0.jpg?VersionId=SExA3wYVrigw.KweBuds.EdLZ62DgvA9');
+
+-- Preguntas difíciles
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) 
+VALUES (5, 3, '¿En qué año ganó Nacional de Uruguay su primera Copa Libertadores?', 'https://imgs.elpais.com.uy/dims4/default/720c533/2147483647/strip/true/crop/705x485+22+0/resize/1440x990!/quality/90/?url=https%3A%2F%2Fel-pais-uruguay-production-web.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fuploads%2F2020%2F04%2F23%2F5ea1931be6aa7.jpeg');
+
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) 
+VALUES (5, 3, '¿Quién fue el primer futbolista argentino en ganar el Balón de Oro?', 'https://images.daznservices.com/di/library/DAZN_News/ff/31/balon-de-oro-2021_1199mc93ccyp21f9h4db74nz8m.jpg?t=-1513217510');
+
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) 
+VALUES (5, 3, '¿Cuál es el club más antiguo de Chile?', 'https://pxbcdn.elchubut.com.ar/chubut/062024/1718233217160.jpg');
+
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) 
+VALUES (5, 3, '¿Cuál es el único club peruano que ha ganado la Copa Libertadores?', 'https://elcomercio.pe/resizer/NoB8TnwqO4oj6aZytzqKqOX5LXQ=/580x330/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/NT2YDY5NIRBNRCIUCX5S54ZEKM.jpg');
+
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) 
+VALUES (5, 3, '¿En qué año fue fundada la Confederación Sudamericana de Fútbol (CONMEBOL)?', 'https://cdn.conmebol.com/wp-content/uploads/2018/02/logo-conmebol-750px-azul_25.jpg');
+
+
