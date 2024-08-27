@@ -134,7 +134,7 @@ INSERT INTO Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) VALUES
 (2, 3, '¿Quién fue el primer futbolista argentino en ganar el Balón de Oro?', 'https://images.daznservices.com/di/library/DAZN_News/ff/31/balon-de-oro-2021_1199mc93ccyp21f9h4db74nz8m.jpg?t=-1513217510'),
 (2, 3, '¿Cuál es el club más antiguo de Chile?', 'https://pxbcdn.elchubut.com.ar/chubut/062024/1718233217160.jpg'),
 (2, 3, '¿Cuál es el único club peruano que ha ganado la Copa Libertadores?', 'https://elcomercio.pe/resizer/NoB8TnwqO4oj6aZytzqKqOX5LXQ=/580x330/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/NT2YDY5NIRBNRCIUCX5S54ZEKM.jpg'),
-(2, 3, '¿En qué año fue fundada la Confederación Sudamericana de Fútbol (CONMEBOL)?', 'https://cdn.conmebol.com/wp-content/uploads/2018/02/logo-conmebol-750px-azul_25.jpg'),
+(2, 3, '¿En qué año fue fundada la Confederación Sudamericana de Fútbol (CONMEBOL)?', 'https://cdn.conmebol.com/wp-content/uploads/2018/02/logo-conmebol-750px-azul_25.jpg');
 
 -- Pregunta 1: ¿Qué país ha ganado más veces la Copa América?
 INSERT INTO Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) VALUES
@@ -142,10 +142,10 @@ INSERT INTO Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) VALUES
 (16, 2, 'Brasil', 0, 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png'),
 (16, 3, 'Argentina', 0, 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/1200px-Flag_of_Argentina.svg.png'),
 (16, 4, 'Chile', 0, 'https://www.shutterstock.com/image-illustration/flag-chile-chilean-on-fabric-260nw-2452772195.jpg'),
-(17, 1, 'La Albiceleste', 1),
-(17, 2, 'La Celeste', 0),
-(17, 3, 'La Vinotinto', 0),
-(17, 4, 'La Roja', 0);
+(17, 1, 'La Albiceleste', 1, ''),
+(17, 2, 'La Celeste', 0, ''),
+(17, 3, 'La Vinotinto', 0, ''),
+(17, 4, 'La Roja', 0, ''),
 (18, 1, 'Brasil', 1, 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png'),
 (18, 2, 'Argentina', 0, 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/1200px-Flag_of_Argentina.svg.png'),
 (18, 3, 'Uruguay', 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgCZF9p58LH4tpMChcVQr8GkmmvXQHqbMfRw&s'),
