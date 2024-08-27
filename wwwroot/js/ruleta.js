@@ -1,9 +1,10 @@
 const wheel = document.getElementById("wheel");
 const spinBtn = document.getElementById("spin-btn");
-const finalValue = document.getElementById("final-value");
 const IrAlJuego = document.getElementById("button");
+const Dificultades = document.getElementById("dificultades");
 var CategoriaTocada = document.getElementById("categorias");
 
+Dificultades.style.visibility = "hidden";
 IrAlJuego.style.visibility = "hidden";
 
 const rotationValues = [
@@ -49,13 +50,10 @@ let touchedBtn = false;
 const valueGenerator = (angleValue) => {
   for (let i of rotationValues) {
     if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
-      finalValue.innerHTML = `<p>Categoria: ${i.value}</p>`;
-      CategoriaTocada = i.value;
+      console.log(i.value);
 
-      
-
-      optionChosen = i.value;
       if(touchedBtn){
+        Dificultades.style.visibility = "visible";
         spinBtn.disabled = true;
       }
       else{
@@ -85,9 +83,9 @@ spinBtn.addEventListener("click", () => {
       count = 0;
       resultValue = 101;
     }
-  }, 10);
 
-  setTimeout(() => {
-    IrAlJuego.style.visibility = "visible";
-  }, 2000);
+    setTimeout(() => {
+      spinBtn.disabled = false;
+    }, 2000);
+  }, 10);
 });
