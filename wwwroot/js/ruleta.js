@@ -46,6 +46,7 @@ let myChart = new Chart(wheel, {
 
 let optionChosen;
 let touchedBtn = false;
+let touchedDificultades = false;
 
 const valueGenerator = (angleValue) => {
   for (let i of rotationValues) {
@@ -55,6 +56,9 @@ const valueGenerator = (angleValue) => {
       if(touchedBtn){
         Dificultades.style.visibility = "visible";
         spinBtn.disabled = true;
+        if(touchedDificultades){
+          IrAlJuego.style.visibility = "visible";
+        }
       }
       else{
         spinBtn.disabled = false;
@@ -63,6 +67,10 @@ const valueGenerator = (angleValue) => {
     }
   }
 };
+
+Dificultades.addEventListener("click", () => {
+  touchedDificultades = true;
+})
 
 let count = 0;
 let resultValue = 101;
