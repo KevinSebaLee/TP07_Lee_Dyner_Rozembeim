@@ -70,7 +70,9 @@ const valueGenerator = (angleValue) => {
 
 Dificultades.addEventListener("click", () => {
   touchedDificultades = true;
-})
+
+  console.log("Apreto boton");
+});
 
 let count = 0;
 let resultValue = 101;
