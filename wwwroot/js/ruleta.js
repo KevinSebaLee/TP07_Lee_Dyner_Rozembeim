@@ -8,12 +8,12 @@ Dificultades.style.visibility = "hidden";
 IrAlJuego.style.visibility = "hidden";
 
 const rotationValues = [
-  { minDegree: 0, maxDegree: 120, value: "Decada 2000" },
-  { minDegree: 121, maxDegree: 240, value: "Futbol Europeo" },
-  { minDegree: 241, maxDegree: 360, value: "Futbol Sudamericano" }
+  { minDegree: 0, maxDegree: 120, value: "Futbol Europeo"},
+  { minDegree: 121, maxDegree: 240, value: "Decada 2000"},
+  { minDegree: 241, maxDegree: 360, value: "Futbol Sudamericano"}
 ];
 
-const data = [33.3, 33.3, 33.3];
+const data = [33, 33, 33];
 const pieColors = ["#00aae4", "#ffd200", "#ff6961"];
 let myChart = new Chart(wheel, {
   plugins: [ChartDataLabels],

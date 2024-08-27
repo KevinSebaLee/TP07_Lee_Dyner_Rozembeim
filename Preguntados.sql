@@ -29,6 +29,7 @@ CREATE TABLE Respuestas(
     Correcta BIT NOT NULL,
     Foto TEXT
 );
+
 INSERT INTO Dificultades (Nombre) VALUES 
 ('Facil'),
 ('Medio'),
