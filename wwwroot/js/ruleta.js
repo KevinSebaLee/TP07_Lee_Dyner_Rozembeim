@@ -6,10 +6,10 @@ const Dificultades = document.getElementById("dificultades");
 IrAlJuego.style.visibility = "hidden";
 
 const rotationValues = [
-  { minDegree: 0, maxDegree: 90, value: "Futbol Europeo"},
-  { minDegree: 91, maxDegree: 180, value: "Futbol Sudamericano"},
-  { minDegree: 181, maxDegree: 270, value: "Decada 2000"},
-  { minDegree: 271, maxDegree: 360, value: "Todas las categorias"}
+  { minDegree: 0, maxDegree: 90, value: "1"},
+  { minDegree: 91, maxDegree: 180, value: "2"},
+  { minDegree: 181, maxDegree: 270, value: "3"},
+  { minDegree: 271, maxDegree: 360, value: "4"}
 ];
 
 const data = [28, 15, 28, 28];
