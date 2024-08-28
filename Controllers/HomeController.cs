@@ -32,8 +32,6 @@ public class HomeController : Controller
         ViewBag.RespuestaPregunta = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.IdPregunta);
         ViewBag.nombreUsuario = Juego.Username;
         ViewBag.Puntaje = Juego.PuntajeActual;
-        ViewBag.NumPregunta = Preguntas.IdPregunta;
-        ViewBag.Enunciado = Preguntas.Enunciado
 
         return View("Juego");
     }
@@ -42,7 +40,7 @@ public class HomeController : Controller
     {
         Juego.CargarPartidas(Username, Dificultad, Categoria);
 
-        if(!(Juego.Pregunta == null)){
+        if(!(Juego.Pregunta.Count() == 0)){
             return RedirectToAction("ConfigurarJuego");
         }
         else{

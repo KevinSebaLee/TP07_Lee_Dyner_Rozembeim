@@ -1,7 +1,7 @@
 public static class Juego{
-    private static string Username {get; set;}
-    private static int PuntajeActual {get; set;}
-    private static int CantidadPreguntasCorrectas {get; set;}
+    public static string Username {get; set;}
+    public static int PuntajeActual {get; set;}
+    public static int CantidadPreguntasCorrectas {get; set;}
     public static List<Preguntas> Pregunta {get; set;}
     public static List<Respuestas> Respuesta {get; set;}
 

@@ -2,24 +2,23 @@ const wheel = document.getElementById("wheel");
 const spinBtn = document.getElementById("spin-btn");
 const IrAlJuego = document.getElementById("button");
 const Dificultades = document.getElementById("dificultades");
-var CategoriaTocada = document.getElementById("categorias");
 
-Dificultades.style.visibility = "hidden";
 IrAlJuego.style.visibility = "hidden";
 
 const rotationValues = [
-  { minDegree: 0, maxDegree: 120, value: "Futbol Europeo"},
-  { minDegree: 121, maxDegree: 240, value: "Decada 2000"},
-  { minDegree: 241, maxDegree: 360, value: "Futbol Sudamericano"}
+  { minDegree: 0, maxDegree: 90, value: "Futbol Europeo"},
+  { minDegree: 91, maxDegree: 180, value: "Futbol Sudamericano"},
+  { minDegree: 181, maxDegree: 270, value: "Decada 2000"},
+  { minDegree: 271, maxDegree: 360, value: "Todas las categorias"}
 ];
 
-const data = [33, 33, 33];
-const pieColors = ["#00aae4", "#ffd200", "#ff6961"];
+const data = [28, 15, 28, 28];
+const pieColors = ["#00aae4", "#88DC65", "#ff6961", "#ffd200"];
 let myChart = new Chart(wheel, {
   plugins: [ChartDataLabels],
   type: "pie",
   data: {
-    labels: ["Futbol Europeo", "Futbol Sudamericano", "Decada 2000"],
+    labels: ["Futbol Europeo", "Todas las categorias", "Decada 2000", "Futbol Sudamericano"],
     datasets: [
       {
         backgroundColor: pieColors,
@@ -52,13 +51,12 @@ const valueGenerator = (angleValue) => {
   for (let i of rotationValues) {
     if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
       console.log(i.value);
+      
+      document.getElementById("categorias").value = i.value;
 
       if(touchedBtn){
-        Dificultades.style.visibility = "visible";
+        IrAlJuego.style.visibility = "initial";
         spinBtn.disabled = true;
-        if(touchedDificultades){
-          IrAlJuego.style.visibility = "visible";
-        }
       }
       else{
         spinBtn.disabled = false;
@@ -67,12 +65,6 @@ const valueGenerator = (angleValue) => {
     }
   }
 };
-
-Dificultades.addEventListener("click", () => {
-  touchedDificultades = true;
-
-  console.log("Apreto boton");
-});
 
 let count = 0;
 let resultValue = 101;

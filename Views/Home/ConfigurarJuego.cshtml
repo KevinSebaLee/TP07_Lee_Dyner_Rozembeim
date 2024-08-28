@@ -7,16 +7,14 @@
         <img class="me-4" src="~/img/Arrow.png" alt="spinner-arrow" />
     </div>
 
-    <form action='@Url.Action("Comenzar")' class="text-center">
-        <div id="dificultades" class="d-flex align-items-center justify-content-center">
-            <button class="text-white me-3 mt-4 btn btn-primary bg-warning border border-warning" style="border-radius: 20px">Facil</button>
-            <button class="text-white me-3 mt-4 btn btn-primary bg-warning border border-warning" style="border-radius: 20px">Medio</button>
-            <button class="text-white me-3 mt-4 btn btn-primary bg-warning border border-warning" style="border-radius: 20px">Dificil</button>
-        </div>
-
+    <form action='@Url.Action("Comenzar", "Home", new{Categoria = 1})' class="text-center mt-5">
         <div id="button">
             <input type="hidden" name="Categoria" id="categorias">
-            <button type="submit" class="btn btn-primary bg-warning border border-warning" style="border-radius: 25px; width: 10vw; height: 5vh;">Jugar</button>
+            <h3>Ingrese su nombre de usuario</h3>
+            <div class="d-flex align-items-center">
+                <input type="text" name="Username">
+            </div>
+            <button type="submit" class="btn btn-primary bg-warning border border-warning mt-3" style="border-radius: 25px; width: 10vw; height: 5vh;">Jugar</button>
         </div>
     </form>
 </div>

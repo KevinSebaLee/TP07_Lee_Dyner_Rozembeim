@@ -37,19 +37,19 @@ AS
 BEGIN
     IF(@idDificultad = 1)
     BEGIN
-        SELECT * FROM Preguntas WHERE @idCategoria = idCategoria AND @idDificultad = IdDificultad;
+        SELECT * FROM Preguntas WHERE @idCategoria = idCategoria;
     END
     ELSE IF(@idDificultad = 2)
     BEGIN 
-        SELECT * FROM Preguntas WHERE @idCategoria = idCategoria AND @idDificultad = IdDificultad;
+        SELECT * FROM Preguntas WHERE @idCategoria = idCategoria;
     END
     ELSE IF(@idDificultad = 3)
     BEGIN
-        SELECT * FROM Preguntas WHERE @idCategoria = idCategoria AND @idDificultad = IdDificultad;
+        SELECT * FROM Preguntas WHERE @idCategoria = idCategoria;
     END
     ELSE
     BEGIN
-        SELECT * FROM Preguntas WHERE @idCategoria = idCategoria AND @idDificultad = IdDificultad; 
+        SELECT * FROM Preguntas WHERE @idCategoria = idCategoria; 
     END
 END
 
