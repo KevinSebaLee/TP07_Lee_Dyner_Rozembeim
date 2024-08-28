@@ -159,3 +159,106 @@ INSERT INTO Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) VALUES
 (20, 2, 'Argentina', 0, 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/1200px-Flag_of_Argentina.svg.png'),
 (20, 3, 'Uruguay', 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgCZF9p58LH4tpMChcVQr8GkmmvXQHqbMfRw&s'),
 (20, 4, 'Paraguay', 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxrhYErTq1Y66xzYcojWuiMuHGxuuLfVGNXw&s');
+
+
+
+-- Pregunta 21: ¿Quién es el máximo goleador histórico de la selección uruguaya?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (21, 1, 'Luis Suárez', 1);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (21, 2, 'Diego Forlán', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (21, 3, 'Edinson Cavani', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (21, 4, 'Enzo Francescoli', 0);
+
+-- Pregunta 22: ¿En qué año ganó River Plate su primera Copa Libertadores?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (22, 1, '1986', 1);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (22, 2, '1976', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (22, 3, '1996', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (22, 4, '2006', 0);
+
+-- Pregunta 23: ¿Cuál es el máximo goleador de la historia de la Copa Libertadores?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (23, 1, 'Alberto Spencer', 1);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (23, 2, 'Pelé', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (23, 3, 'Carlos Bianchi', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (23, 4, 'Teófilo Cubillas', 0);
+
+-- Pregunta 24: ¿Qué club ganó la Copa Sudamericana en 2022?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (24, 1, 'Independiente del Valle', 1);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (24, 2, 'Athletico Paranaense', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (24, 3, 'Lanús', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (24, 4, 'Colón', 0);
+
+-- Pregunta 25: ¿Quién fue el entrenador de la selección chilena que ganó la Copa América en 2015?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (25, 1, 'Jorge Sampaoli', 1);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (25, 2, 'Marcelo Bielsa', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (25, 3, 'Manuel Pellegrini', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (25, 4, 'Héctor Cúper', 0);
+
+
+-- Pregunta 26: ¿En qué año ganó Nacional de Uruguay su primera Copa Libertadores?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (26, 1, '1971', 1);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (26, 2, '1961', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (26, 3, '1980', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (26, 4, '1988', 0);
+
+-- Pregunta 27: ¿Quién fue el primer futbolista argentino en ganar el Balón de Oro?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (27, 1, 'Alfredo Di Stéfano', 1);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (27, 2, 'Diego Maradona', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (27, 3, 'Lionel Messi', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (27, 4, 'Mario Kempes', 0);
+
+-- Pregunta 28: ¿Cuál es el club más antiguo de Chile?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (28, 1, 'Santiago Wanderers', 1);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (28, 2, 'Colo-Colo', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (28, 3, 'Universidad de Chile', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (28, 4, 'Audax Italiano', 0);
+
+-- Pregunta 29: ¿Cuál es el único club peruano que ha ganado la Copa Libertadores?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (29, 1, 'Sporting Cristal', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (29, 2, 'Alianza Lima', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (29, 3, 'Universitario', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (29, 4, 'Club Universitario de Deportes', 1);
+
+-- Pregunta 30: ¿En qué año fue fundada la Confederación Sudamericana de Fútbol (CONMEBOL)?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (30, 1, '1916', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (30, 2, '1919', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (30, 3, '1922', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (30, 4, '1916', 1);

@@ -26,7 +26,7 @@ public class BD{
         return Dificultad;
     }
 
-    public static List<Preguntas> ObtenerDificultades(int Dificultad, int Categorias){
+    public static List<Preguntas> ObtenerPreguntas(int Dificultad, int Categorias){
         string query = "SELECT * FROM Preguntas INNER JOIN Dificultades ON Preguntas.IdDificultad = Preguntas.IdDificultad INNER JOIN Categorias ON Preguntas.IdCategoria = Categorias.IdCategoria WHERE IdDificultad = @idDificultad AND IdCategoria = @idCategoria";
         List<Preguntas> Pregunta = null;
         using(SqlConnection db = new SqlConnection(_connectionString)){
