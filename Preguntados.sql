@@ -182,3 +182,232 @@ INSERT INTO Respuestas(IdPregunta, Opcion, Contenido, Correcta, Foto) VALUES
 (20, 2, 'Argentina', 0, 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/1200px-Flag_of_Argentina.svg.png'),
 (20, 3, 'Uruguay', 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgCZF9p58LH4tpMChcVQr8GkmmvXQHqbMfRw&s'),
 (20, 4, 'Paraguay', 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxrhYErTq1Y66xzYcojWuiMuHGxuuLfVGNXw&s');
+
+
+
+-- Pregunta 21: ¿Quién es el máximo goleador histórico de la selección uruguaya?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (21, 1, 'Luis Suárez', 1);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (21, 2, 'Diego Forlán', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (21, 3, 'Edinson Cavani', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (21, 4, 'Enzo Francescoli', 0);
+
+-- Pregunta 22: ¿En qué año ganó River Plate su primera Copa Libertadores?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (22, 1, '1986', 1);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (22, 2, '1976', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (22, 3, '1996', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (22, 4, '2006', 0);
+
+-- Pregunta 23: ¿Cuál es el máximo goleador de la historia de la Copa Libertadores?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (23, 1, 'Alberto Spencer', 1);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (23, 2, 'Pelé', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (23, 3, 'Carlos Bianchi', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (23, 4, 'Teófilo Cubillas', 0);
+
+-- Pregunta 24: ¿Qué club ganó la Copa Sudamericana en 2022?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (24, 1, 'Independiente del Valle', 1);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (24, 2, 'Athletico Paranaense', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (24, 3, 'Lanús', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (24, 4, 'Colón', 0);
+
+-- Pregunta 25: ¿Quién fue el entrenador de la selección chilena que ganó la Copa América en 2015?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (25, 1, 'Jorge Sampaoli', 1);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (25, 2, 'Marcelo Bielsa', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (25, 3, 'Manuel Pellegrini', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (25, 4, 'Héctor Cúper', 0);
+
+
+-- Pregunta 26: ¿En qué año ganó Nacional de Uruguay su primera Copa Libertadores?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (26, 1, '1971', 1);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (26, 2, '1961', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (26, 3, '1980', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (26, 4, '1988', 0);
+
+-- Pregunta 27: ¿Quién fue el primer futbolista argentino en ganar el Balón de Oro?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (27, 1, 'Alfredo Di Stéfano', 1);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (27, 2, 'Diego Maradona', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (27, 3, 'Lionel Messi', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (27, 4, 'Mario Kempes', 0);
+
+-- Pregunta 28: ¿Cuál es el club más antiguo de Chile?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (28, 1, 'Santiago Wanderers', 1);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (28, 2, 'Colo-Colo', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (28, 3, 'Universidad de Chile', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (28, 4, 'Audax Italiano', 0);
+
+-- Pregunta 29: ¿Cuál es el único club peruano que ha ganado la Copa Libertadores?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (29, 1, 'Sporting Cristal', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (29, 2, 'Alianza Lima', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (29, 3, 'Universitario', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (29, 4, 'Club Universitario de Deportes', 1);
+
+-- Pregunta 30: ¿En qué año fue fundada la Confederación Sudamericana de Fútbol (CONMEBOL)?
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (30, 1, '1916', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (30, 2, '1919', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (30, 3, '1922', 0);
+insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+values (30, 4, '1916', 1);
+
+
+
+-- Insertar preguntas de nivel fácil
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) values (3, 1, '¿En qué año ganó Brasil el Mundial de la FIFA en la década de 2000?', '');
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) values (3, 1, '¿Qué jugador argentino ganó el Balón de Oro por primera vez en la década de 2000?', '');
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) values (3, 1, '¿Qué equipo ganó la UEFA Champions League en 2005 tras una famosa remontada?', '');
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) values (3, 1, '¿Qué selección sudamericana ganó la Copa América en 2004?', '');
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) values (3, 1, '¿Quién fue el máximo goleador de la Copa Mundial de la FIFA 2006?', '');
+
+
+
+-- Insertar preguntas de nivel medio
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) values (3, 2, '¿Qué equipo italiano ganó la Serie A durante cinco temporadas consecutivas entre 2005 y 2009?', '');
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) values (3, 2, '¿Qué entrenador llevó al FC Barcelona a ganar su primera Liga de Campeones en la década de 2000?', '');
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) values (3, 2, '¿Quién fue el portero titular de la selección italiana en la final del Mundial 2006?', '');
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) values (3, 2, '¿Qué selección ganó la Eurocopa 2004 en una de las mayores sorpresas del fútbol?', '');
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) values (3, 2, '¿Qué jugador fue conocido como "el emperador" durante la década de 2000?', '');
+
+-- Insertar preguntas de nivel difícil
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) values (3, 3, '¿Qué equipo sudamericano ganó la Copa Libertadores tres veces consecutivas entre 2000 y 2003?', '');
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) values (3, 3, '¿Qué jugador ganó la Bota de Oro como máximo goleador de las ligas europeas en 2003/2004?', '');
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) values (3, 3, '¿Qué equipo inglés descendió de la Premier League en 2003 y volvió a subir en 2007?', '');
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) values (3, 3, '¿Qué selección eliminó a Argentina en los cuartos de final del Mundial de 2006?', '');
+insert into Preguntas (IdCategoria, IdDificultad, Enunciado, Foto) values (3, 3, '¿Qué futbolista brasileño fue transferido del Santos al Real Madrid en 2005?', '');
+
+
+
+
+
+
+-- Respuestas para la pregunta "¿En qué año ganó Brasil el Mundial de la FIFA en la década de 2000?"
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (31, 1, '2002', 1, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (31, 2, '2004', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (31, 3, '2006', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (31, 4, '2008', 0, '');
+
+-- Respuestas para la pregunta "¿Qué jugador argentino ganó el Balón de Oro por primera vez en la década de 2000?"
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (32, 1, 'Lionel Messi', 1, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (32, 2, 'Juan Román Riquelme', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (32, 3, 'Carlos Tévez', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (32, 4, 'Gabriel Batistuta', 0, '');
+
+-- Respuestas para la pregunta "¿Qué equipo ganó la UEFA Champions League en 2005 tras una famosa remontada?"
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (33, 1, 'Liverpool', 1, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (33, 2, 'AC Milan', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (33, 3, 'Real Madrid', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (33, 4, 'Manchester United', 0, '');
+
+-- Respuestas para la pregunta "¿Qué selección sudamericana ganó la Copa América en 2004?"
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (34, 1, 'Brasil', 1, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (34, 2, 'Argentina', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (34, 3, 'Uruguay', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (34, 4, 'Colombia', 0, '');
+
+-- Respuestas para la pregunta "¿Quién fue el máximo goleador de la Copa Mundial de la FIFA 2006?"
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (35, 1, 'Miroslav Klose', 1, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (35, 2, 'Ronaldo', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (35, 3, 'Thierry Henry', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (35, 4, 'David Villa', 0, '');
+
+
+
+
+-- Respuestas para la pregunta "¿Qué equipo italiano ganó la Serie A durante cinco temporadas consecutivas entre 2005 y 2009?"
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (36, 1, 'Inter de Milán', 1, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (36, 2, 'AC Milan', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (36, 3, 'Juventus', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (36, 4, 'Roma', 0, '');
+
+-- Respuestas para la pregunta "¿Qué entrenador llevó al FC Barcelona a ganar su primera Liga de Campeones en la década de 2000?"
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (37, 1, 'Frank Rijkaard', 1, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (37, 2, 'Pep Guardiola', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (37, 3, 'Louis van Gaal', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (37, 4, 'Tito Vilanova', 0, '');
+
+-- Respuestas para la pregunta "¿Quién fue el portero titular de la selección italiana en la final del Mundial 2006?"
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (38, 1, 'Gianluigi Buffon', 1, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (38, 2, 'Francesco Toldo', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (38, 3, 'Angelo Peruzzi', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (38, 4, 'Marco Amelia', 0, '');
+
+-- Respuestas para la pregunta "¿Qué selección ganó la Eurocopa 2004 en una de las mayores sorpresas del fútbol?"
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (39, 1, 'Grecia', 1, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (39, 2, 'Portugal', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (39, 3, 'Francia', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (39, 4, 'España', 0, '');
+
+-- Respuestas para la pregunta "¿Qué jugador fue conocido como 'el emperador' durante la década de 2000?"
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (40, 1, 'Adriano', 1, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (40, 2, 'Ronaldinho', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (40, 3, 'Zlatan Ibrahimović', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (40, 4, 'Francesco Totti', 0, '');
+
+
+
+
+-- Respuestas para la pregunta "¿Qué equipo sudamericano ganó la Copa Libertadores tres veces consecutivas entre 2000 y 2003?"
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (41, 1, 'Boca Juniors', 1, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (41, 2, 'São Paulo', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (41, 3, 'Santos', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (41, 4, 'River Plate', 0, '');
+
+-- Respuestas para la pregunta "¿Qué jugador ganó la Bota de Oro como máximo goleador de las ligas europeas en 2003/2004?"
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (42, 1, 'Thierry Henry', 1, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (42, 2, 'Diego Forlán', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (42, 3, 'Ruud van Nistelrooy', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (42, 4, 'Andriy Shevchenko', 0, '');
+
+-- Respuestas para la pregunta "¿Qué equipo inglés descendió de la Premier League en 2003 y volvió a subir en 2007?"
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (43, 1, 'Sunderland', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (43, 2, 'Leeds United', 1, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (43, 3, 'West Ham United', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (43, 4, 'Manchester City', 0, '');
+
+-- Respuestas para la pregunta "¿Qué selección eliminó a Argentina en los cuartos de final del Mundial de 2006?"
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (44, 1, 'Alemania', 1, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (44, 2, 'Brasil', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (44, 3, 'Italia', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (44, 4, 'Francia', 0, '');
+
+-- Respuestas para la pregunta "¿Qué futbolista brasileño fue transferido del Santos al Real Madrid en 2005?"
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (45, 1, 'Robinho', 1, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (45, 2, 'Kaká', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (45, 3, 'Ronaldinho', 0, '');
+insert into Respuestas (IdPregunta, Opcion, Contenido, Correcta, Foto) values (45, 4, 'Ronaldo', 0, '');
