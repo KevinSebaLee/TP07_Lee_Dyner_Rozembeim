@@ -30,6 +30,10 @@ public class HomeController : Controller
     public IActionResult Jugar(){
         ViewBag.PreguntaActual = Juego.ObtenerProximaPregunta();
         ViewBag.RespuestaPregunta = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.IdPregunta);
+        ViewBag.nombreUsuario = Juego.Username;
+        ViewBag.Puntaje = Juego.PuntajeActual;
+        ViewBag.NumPregunta = Preguntas.IdPregunta;
+        ViewBag.Enunciado = Preguntas.Enunciado
 
         return View("Juego");
     }
