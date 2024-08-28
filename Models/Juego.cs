@@ -20,7 +20,7 @@ public static class Juego{
     }
 
     public static void CargarPartidas(string Username, int Dificultad, int Categoria){
-        Pregunta = BD.ObtenerDificultades(Dificultad, Categoria);
+        Pregunta = BD.ObtenerPreguntas(Dificultad, Categoria);
         Respuesta = BD.ObtenerRespuestas(Pregunta);
     }
 
@@ -31,12 +31,13 @@ public static class Juego{
         return Pregunta[SeleccionarPreguntaRnd];
     }
 
-    public static List<Respuestas> ObtenerProximasRespuestas(int idPregunta){
+    public static List<Respuestas> ObtenerProximasRespuestas(int idPregunta)
+    {
         List<Respuestas> PosiblesRespuestas = new List<Respuestas>();
 
-        foreach (Respuestas respuesta in Respuesta) {
-            if (respuesta.IdPregunta == idPregunta) {
-                PosiblesRespuestas.Add(respuesta);
+        foreach(Respuestas r in Respuesta){
+            if(r.IdPregunta == idPregunta){
+                PosiblesRespuestas.Add(r);
             }
         }
 

@@ -26,11 +26,12 @@ public class BD{
         return Dificultad;
     }
 
-    public static List<Preguntas> ObtenerDificultades(int Dificultad, int Categorias){
-        string query = "SELECT * FROM Preguntas INNER JOIN Dificultades ON Preguntas.IdDificultad = Preguntas.IdDificultad INNER JOIN Categorias ON Preguntas.IdCategoria = Categorias.IdCategoria WHERE IdDificultad = @idDificultad AND IdCategoria = @idCategoria";
+    public static List<Preguntas> ObtenerPreguntas(int Dificultad, int Categorias)
+    {
         List<Preguntas> Pregunta = null;
+        string sp = "Sp_ObtenerPreguntas";
         using(SqlConnection db = new SqlConnection(_connectionString)){
-            Pregunta = db.Query<Preguntas>(query, new{@idDificultad = Dificultad, @IdCategoria = Categorias}).ToList();
+            Pregunta = db.Query<Preguntas>(sp, new {@idDificultad = Dificultad, @idCategoria = Categorias}, commandType: System.Data.CommandType.StoredProcedure).ToList();
         } 
 
         return Pregunta;

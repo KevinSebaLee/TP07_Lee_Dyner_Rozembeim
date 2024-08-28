@@ -30,6 +30,29 @@ CREATE TABLE Respuestas(
     Foto TEXT
 );
 
+CREATE PROCEDURE Sp_ObtenerPreguntas
+    @idDificultad INT,
+    @idCategoria INT
+AS
+BEGIN
+    IF(@idDificultad = 1)
+    BEGIN
+        SELECT * FROM Preguntas WHERE @idCategoria = idCategoria AND @idDificultad = IdDificultad;
+    END
+    ELSE IF(@idDificultad = 2)
+    BEGIN 
+        SELECT * FROM Preguntas WHERE @idCategoria = idCategoria AND @idDificultad = IdDificultad;
+    END
+    ELSE IF(@idDificultad = 3)
+    BEGIN
+        SELECT * FROM Preguntas WHERE @idCategoria = idCategoria AND @idDificultad = IdDificultad;
+    END
+    ELSE
+    BEGIN
+        SELECT * FROM Preguntas WHERE @idCategoria = idCategoria AND @idDificultad = IdDificultad; 
+    END
+END
+
 INSERT INTO Dificultades (Nombre) VALUES 
 ('Facil'),
 ('Medio'),
