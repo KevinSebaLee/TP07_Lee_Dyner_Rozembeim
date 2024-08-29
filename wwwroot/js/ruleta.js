@@ -1,93 +1,79 @@
-const wheel = document.getElementById("wheel");
-const spinBtn = document.getElementById("spin-btn");
-const IrAlJuego = document.getElementById("button");
-const Dificultades = document.getElementById("dificultades");
+let buttonClicked = false;
+const categorias = ["Historia", "Ciencia", "Geografía", "Arte", "Deportes"];
+const colores = ["#FF6F61", "#6B5B95", "#88B04B", "#F7CAC9", "#92A8D1"];
+const numSecciones = categorias.length;
+const anguloPorSeccion = 2 * Math.PI / numSecciones;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const Username = document.getElementById("Username");
+const ruleta = document.getElementById("ruleta");
+const botonNombre = document.getElementById("botonUsuario");
+const nombre = document.getElementById("nombreUsuario");
 
-IrAlJuego.style.visibility = "hidden";
+ruleta.style.visibility="hidden";
 
-const rotationValues = [
-  { minDegree: 0, maxDegree: 90, value: "1"},
-  { minDegree: 91, maxDegree: 180, value: "2"},
-  { minDegree: 181, maxDegree: 270, value: "3"},
-  { minDegree: 271, maxDegree: 360, value: "4"}
-];
+let anguloInicial = 0;
 
-const data = [28, 15, 28, 28];
-const pieColors = ["#00aae4", "#88DC65", "#ff6961", "#ffd200"];
-let myChart = new Chart(wheel, {
-  plugins: [ChartDataLabels],
-  type: "pie",
-  data: {
-    labels: ["Futbol Europeo", "Todas las categorias", "Decada 2000", "Futbol Sudamericano"],
-    datasets: [
-      {
-        backgroundColor: pieColors,
-        data: data,
-      },
-    ],
-  },
-  options: {
-    responsive: true,
-    animation: { duration: 0 },
-    plugins: {
-      tooltip: false,
-      legend: {
-        display: false,
-      },
-      datalabels: {
-        color: "#ffffff",
-        formatter: (_, context) => context.chart.data.labels[context.dataIndex],
-        font: { size: 17 },
-      },
-    },
-  },
-});
+function dibujarRuleta() {
+    for (let i = 0; i < numSecciones; i++) {
+        const anguloFinal = anguloInicial + anguloPorSeccion;
+        ctx.beginPath();
+        ctx.moveTo(canvas.width / 2, canvas.height / 2);
+        ctx.arc(canvas.width / 2, canvas.height / 2, canvas.width / 2, anguloInicial, anguloFinal);
+        ctx.fillStyle = colores[i];
+        ctx.fill();
+        ctx.strokeStyle = "#FFFFFF"; // Borde blanco para un diseño más limpio
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.save();
 
-let optionChosen;
-let touchedBtn = false;
-let touchedDificultades = false;
+        ctx.translate(canvas.width / 2, canvas.height / 2);
+        ctx.rotate(anguloInicial + anguloPorSeccion / 2);
+        ctx.textAlign = "right";
+        ctx.fillStyle = "#FFFFFF";
+        ctx.font = "bold 18px Arial";
+        ctx.fillText(categorias[i], canvas.width / 2 - 20, 10);
+        ctx.restore();
 
-const valueGenerator = (angleValue) => {
-  for (let i of rotationValues) {
-    if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
-      console.log(i.value);
-      
-      document.getElementById("categorias").value = i.value;
-
-      if(touchedBtn){
-        IrAlJuego.style.visibility = "initial";
-        spinBtn.disabled = true;
-      }
-      else{
-        spinBtn.disabled = false;
-      }
-      break;
+        anguloInicial = anguloFinal;
     }
-  }
-};
+}
 
-let count = 0;
-let resultValue = 101;
-spinBtn.addEventListener("click", () => {
-  touchedBtn = true;
-  spinBtn.disabled = true;
-  let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
-  let rotationInterval = window.setInterval(() => {
-    myChart.options.rotation = myChart.options.rotation + resultValue;
-    myChart.update();
-    if (myChart.options.rotation >= 360) {
-      count += 1;
-      resultValue -= 5;
-      myChart.options.rotation = 0;
-    } else if (count > 15 && myChart.options.rotation == randomDegree) {
-      valueGenerator(randomDegree);
-      clearInterval(rotationInterval);
-      count = 0;
-      resultValue = 101;
+function ingresarUsuario(){
+    if(nombre.value != ""){
+        event.preventDefault();
+        Username.style.visibility ="hidden";
+        ruleta.style.visibility="visible";
     }
+    else{
+        botonNombre.disabled = true;
+    }
+}
+
+function girarRuleta() {
+    if (buttonClicked) return; // No permitir más clics mientras gira
+    buttonClicked = true;
+
+    // Calcular una rotación a la derecha
+    const rotacion = Math.floor(Math.random() * 3600) + 360;
+    const duracion = 5; // duración en segundos
+    canvas.style.transition = `transform ${duracion}s ease-out`;
+    canvas.style.transform = `rotate(${rotacion}deg)`;
 
     setTimeout(() => {
-      spinBtn.disabled = false;
-    }, 2000);
-  }, 10);
-});
+        const anguloFinal = rotacion % 360;
+        const indiceGanador = Math.floor(numSecciones - (anguloFinal / 360) * numSecciones) % numSecciones;
+
+        document.getElementById("resultado").textContent = `¡La categoría es: ${categorias[indiceGanador]}! y su usuario es ${nombre.value}`;
+        document.getElementById("continuarBtn").style.display = 'block'; // Mostrar el botón Continuar
+        document.getElementById("girarBtn").disabled = true; // Deshabilitar el botón Girar
+        canvas.style.transition = "none"; // Para permitir más giros posteriores
+    }, duracion * 1000);
+}
+
+function continuar() {
+    document.getElementById("continuarBtn").style.display = 'none'; // Ocultar el botón Continuar
+    document.getElementById("girarBtn").disabled = false; // Habilitar el botón Girar
+}
+
+dibujarRuleta();
