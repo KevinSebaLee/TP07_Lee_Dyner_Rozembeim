@@ -1,77 +1,88 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  body {
-    height: 100vh;
-    background-color: #8c8c8c;
-  }
-  .wrapper {
-    width: 90%;
-    max-width: 34.37em;
-    max-height: 90vh;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    padding: 3em;
-    border-radius: 1em;
-  }
-  .container {
+.ruleta-container {
     position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  #wheel {
-    max-height: inherit;
-    width: inherit;
-    top: 0;
-    padding: 0;
-  }
-  @keyframes rotate {
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  #spin-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    background: #FFFFFF; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+}
+
+canvas {
+    border-radius: 50%; /* Hacer la ruleta redonda */
+    /* Se ha eliminado la sombra */
+}
+
+.flecha {
     position: absolute;
-    transform: translate(-50%, -50%);
     top: 50%;
-    left: 50%;
-    height: 26%;
-    width: 26%;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 0;
-    color: black;
-    text-transform: uppercase;
-    font-size: 1.8em;
-    letter-spacing: 0.1em;
-    font-weight: 600;
-    transition: background-color 0.4s;
-  }
-  #spin-btn:hover{
-    background-color: #d3d3d3;
-  }
-  img {
+    left: 75%; /* Posicionar a la derecha del contenedor */
+    transform: translateY(-50%) translateX(-50%) rotate(180deg); /* Ajustar posición y rotar la imagen 180 grados */
+    width: 100px; /* Ajuste de tamaño */
+    height: 100px; /* Ajuste de tamaño */
+    z-index: 10; /* Para que la flecha esté siempre visible encima de la ruleta */
+}
+
+.girarBtn {
     position: absolute;
-    width: 4em;
-    top: 45%;
-    right: -8%;
-  }
-  #final-value {
-    font-size: 1.5em;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px; /* Tamaño redondo */
+    height: 100px; /* Tamaño redondo */
+    background-color: #2196F3; /* Azul */
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* Redondear el botón */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra del botón */
+}
+
+.girarBtn:hover {
+    background-color: #1976D2;
+    transform: translate(-50%, -50%) scale(1.1); /* Agrandar al pasar el mouse */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+}
+
+#resultado-container {
     text-align: center;
-    margin-top: 1.5em;
-    color: #202020;
-    font-weight: 500;
-  }
-  @media screen and (max-width: 768px) {
-    .wrapper {
-      font-size: 12px;
-    }
-    img {
-      right: -5%;
-    }
-  }
+    margin-top: 20px;
+    position: relative;
+    padding-bottom: 60px; /* Espacio para el botón Continuar y evitar superposición con el footer */
+}
+
+#resultado {
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+}
+
+#continuarBtn {
+    margin-top: 20px;
+    background-color: #2196F3; /* Mismo color que el botón de girar */
+    color: #fff;
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    width: 120px; /* Tamaño cuadrado */
+    height: 50px; /* Tamaño cuadrado */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra del botón */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#continuarBtn:hover {
+    background-color: #1976D2;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+}
