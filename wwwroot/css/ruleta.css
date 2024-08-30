@@ -10,16 +10,15 @@
 }
 
 canvas {
-    border-radius: 50%; /* Hacer la ruleta redonda */
-    /* Se ha eliminado la sombra */
+    border-radius: 50%;
 }
 
 .flecha {
     position: absolute;
     top: 50%;
     left: 75%; /* Posicionar a la derecha del contenedor */
-    transform: translateY(-50%) translateX(-50%) rotate(180deg); /* Ajustar posición y rotar la imagen 180 grados */
-    width: 100px; /* Ajuste de tamaño */
+    transform: translateY(-50%) translateX(-50%); /* Ajustar posición y rotar la imagen 180 grados */
+    width: 200px; /* Ajuste de tamaño */
     height: 100px; /* Ajuste de tamaño */
     z-index: 10; /* Para que la flecha esté siempre visible encima de la ruleta */
 }

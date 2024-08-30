@@ -1,33 +1,26 @@
 <head><link rel="stylesheet" href="~/css/ruleta.css" asp-append-version="true"/></head>
 
-<div class="ConfigurarJuego">
-    <form  id="Username">
-        <div class="d-flex align-items-center justify-content-center">
-            <h1>Ingrese su nombre de usuario</h5>
-            <input type="text" id="nombreUsuario" required>
-            <button onclick="ingresarUsuario()" id="botonUsuario">Ingresar</button>
-        </div>
-    </form>
-
-    <div class="ruleta-container" id="ruleta">
-        <canvas id="canvas" width="500" height="500"></canvas>
-        <img src="~/images/flecha.png" class="flecha" alt="Flecha">
-        <button class="girarBtn" id="girarBtn" onclick="girarRuleta()">Girar</button>
-    </div>
-
-    <div id="resultado-container">
-        <div id="resultado"></div>
-        <button id="continuarBtn" onclick="continuar()" style="display: none;">Continuar</button>
-    </div>
+<div class="ruleta-container" id="ruleta">
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <img src="~/img/Arrow.png" class="flecha" alt="Flecha">
+    <button class="girarBtn" id="girarBtn" onclick="girarRuleta()">Girar</button>
 </div>
 
-<form action='@Url.Action("Comenzar", "Home", new{Categoria = 1})' class="text-center mt-5">
+<form id="Username" action='@Url.Action("Comenzar", "Home", new{Dificultad = 1})' class="text-center mt-5">
+    <div class="d-flex align-items-center justify-content-center">
+        <h1>Ingrese su nombre de usuario</h5>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center">
+        <input type="text" id="nombreUsuario" required>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center">  
+        <button onclick="ingresarUsuario()" class="btn btn-primary bg-warning border border-warning mt-3" style="border-radius: 25px; width: 10vw; height: 5vh;" id="botonUsuario">Ingresar</button>
+    </div>
+
     <div id="button">
         <input type="hidden" name="Categoria" id="categorias">
-        <h3>Ingrese su nombre de usuario</h3>
-        <div class="d-flex align-items-center">
-            <input type="text" name="Username">
-        </div>
         <button type="submit" class="btn btn-primary bg-warning border border-warning mt-3" style="border-radius: 25px; width: 10vw; height: 5vh;">Jugar</button>
     </div>
 </form>

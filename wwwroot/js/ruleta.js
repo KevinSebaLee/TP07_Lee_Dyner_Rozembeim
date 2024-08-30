@@ -1,5 +1,5 @@
 let buttonClicked = false;
-const categorias = ["Historia", "Ciencia", "Geografía", "Arte", "Deportes"];
+const categorias = ["Futbol Sudamericano", "Futbol Europeo", "Decada 2000", "Todas las categorias"];
 const colores = ["#FF6F61", "#6B5B95", "#88B04B", "#F7CAC9", "#92A8D1"];
 const numSecciones = categorias.length;
 const anguloPorSeccion = 2 * Math.PI / numSecciones;
@@ -9,8 +9,11 @@ const Username = document.getElementById("Username");
 const ruleta = document.getElementById("ruleta");
 const botonNombre = document.getElementById("botonUsuario");
 const nombre = document.getElementById("nombreUsuario");
+const Jugar = document.getElementById("button");
+const Categoria = document.getElementById("categorias");
 
 ruleta.style.visibility="hidden";
+Jugar.style.visibility="hidden";
 
 let anguloInicial = 0;
 
@@ -63,17 +66,12 @@ function girarRuleta() {
     setTimeout(() => {
         const anguloFinal = rotacion % 360;
         const indiceGanador = Math.floor(numSecciones - (anguloFinal / 360) * numSecciones) % numSecciones;
-
-        document.getElementById("resultado").textContent = `¡La categoría es: ${categorias[indiceGanador]}! y su usuario es ${nombre.value}`;
-        document.getElementById("continuarBtn").style.display = 'block'; // Mostrar el botón Continuar
+        
+        Jugar.style.visibility="visible";
+        Categoria = categorias[indiceGanador];
         document.getElementById("girarBtn").disabled = true; // Deshabilitar el botón Girar
         canvas.style.transition = "none"; // Para permitir más giros posteriores
     }, duracion * 1000);
-}
-
-function continuar() {
-    document.getElementById("continuarBtn").style.display = 'none'; // Ocultar el botón Continuar
-    document.getElementById("girarBtn").disabled = false; // Habilitar el botón Girar
 }
 
 dibujarRuleta();
