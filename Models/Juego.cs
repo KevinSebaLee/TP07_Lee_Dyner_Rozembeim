@@ -61,13 +61,15 @@ public static class Juego{
         }
     }
 
-    public static Respuesta EncontrarRespuestaCorrecta(int idPregunta, int idRespuesta){
-        foreach(Respuesta r in Juego.Respuesta){
-            if(r.IdPregunta.Contains(idPregunta)){
-                if(r.Correcta == 1){
-                    return r;
-                }
+    public static Respuestas EncontrarRespuestaCorrecta(int idPregunta, int idRespuesta){
+        Respuestas respuesta = null;
+
+        foreach(Respuestas r in Juego.Respuesta){
+            if(VerificarRespuesta(r.IdPregunta, r.IdRespuesta)){
+                respuesta = r;
             }
         }
+
+        return respuesta;
     }
 }
