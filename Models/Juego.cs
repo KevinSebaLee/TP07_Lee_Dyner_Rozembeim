@@ -19,7 +19,9 @@ public static class Juego{
         return BD.ObtenerDificultades();
     }
 
-    public static void CargarPartidas(string Username, int Dificultad, int Categoria){
+    public static void CargarPartidas(string username, int Dificultad, int Categoria){
+        Username = username;
+
         Pregunta = BD.ObtenerPreguntas(Dificultad, Categoria);
         Respuesta = BD.ObtenerRespuestas(Pregunta);
     }
@@ -27,6 +29,8 @@ public static class Juego{
     public static Preguntas ObtenerProximaPregunta(){
         Random rnd = new Random();
         int SeleccionarPreguntaRnd = rnd.Next(0, Pregunta.Count());
+
+        Console.WriteLine(SeleccionarPreguntaRnd);
 
         return Pregunta[SeleccionarPreguntaRnd];
     }

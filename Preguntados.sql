@@ -35,22 +35,14 @@ CREATE PROCEDURE Sp_ObtenerPreguntas
     @idCategoria INT
 AS
 BEGIN
-    IF(@idDificultad = 1)
-    BEGIN
-        SELECT * FROM Preguntas WHERE @idCategoria = idCategoria;
-    END
-    ELSE IF(@idDificultad = 2)
-    BEGIN 
-        SELECT * FROM Preguntas WHERE @idCategoria = idCategoria;
-    END
-    ELSE IF(@idDificultad = 3)
-    BEGIN
-        SELECT * FROM Preguntas WHERE @idCategoria = idCategoria;
-    END
-    ELSE
-    BEGIN
-        SELECT * FROM Preguntas WHERE @idCategoria = idCategoria; 
-    END
+	IF(@idCategoria != 4)
+		BEGIN
+			SELECT * FROM Preguntas WHERE @idCategoria = idCategoria;
+		END
+	ELSE
+		BEGIN
+			SELECT * FROM Preguntas
+		END
 END
 
 INSERT INTO Dificultades (Nombre) VALUES 

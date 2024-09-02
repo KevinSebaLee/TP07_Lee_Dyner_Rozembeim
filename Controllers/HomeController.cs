@@ -40,7 +40,7 @@ public class HomeController : Controller
     {
         Juego.CargarPartidas(Username, Dificultad, Categoria);
 
-        if(!(Juego.Pregunta.Count() == 0)){
+        if(Juego.Pregunta.Count() == 0){
             return RedirectToAction("ConfigurarJuego");
         }
         else{

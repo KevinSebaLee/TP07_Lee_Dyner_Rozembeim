@@ -10,7 +10,8 @@ const ruleta = document.getElementById("ruleta");
 const botonNombre = document.getElementById("botonUsuario");
 const nombre = document.getElementById("nombreUsuario");
 const Jugar = document.getElementById("button");
-const Categoria = document.getElementById("categorias");
+
+let Categoria = document.getElementById("categorias");
 
 ruleta.style.visibility="hidden";
 Jugar.style.visibility="hidden";
@@ -25,7 +26,7 @@ function dibujarRuleta() {
         ctx.arc(canvas.width / 2, canvas.height / 2, canvas.width / 2, anguloInicial, anguloFinal);
         ctx.fillStyle = colores[i];
         ctx.fill();
-        ctx.strokeStyle = "#FFFFFF"; // Borde blanco para un diseño más limpio
+        ctx.strokeStyle = "#FFFFFF";
         ctx.lineWidth = 2;
         ctx.stroke();
         ctx.save();
@@ -54,12 +55,11 @@ function ingresarUsuario(){
 }
 
 function girarRuleta() {
-    if (buttonClicked) return; // No permitir más clics mientras gira
+    if (buttonClicked) return;
     buttonClicked = true;
 
-    // Calcular una rotación a la derecha
     const rotacion = Math.floor(Math.random() * 3600) + 360;
-    const duracion = 5; // duración en segundos
+    const duracion = 5;
     canvas.style.transition = `transform ${duracion}s ease-out`;
     canvas.style.transform = `rotate(${rotacion}deg)`;
 
@@ -68,7 +68,22 @@ function girarRuleta() {
         const indiceGanador = Math.floor(numSecciones - (anguloFinal / 360) * numSecciones) % numSecciones;
         
         Jugar.style.visibility="visible";
-        Categoria = categorias[indiceGanador];
+
+        if(categorias[indiceGanador] === "Futbol Europeo"){
+            Categoria.value = 1;
+        }
+        else if(categorias[indiceGanador] === "Futbol Sudamericano"){
+            Categoria.value = 2;
+        }
+        else if(categorias[indiceGanador] === "Decada 2000"){
+            Categoria.value = 3;
+        }
+        else{
+            Categoria.value = 4;
+        }
+
+        console.log(Categoria.value);
+
         document.getElementById("girarBtn").disabled = true; // Deshabilitar el botón Girar
         canvas.style.transition = "none"; // Para permitir más giros posteriores
     }, duracion * 1000);
