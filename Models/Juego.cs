@@ -60,4 +60,6 @@ public static class Juego{
             return false;
         }
     }
+
+    public static 
 }
