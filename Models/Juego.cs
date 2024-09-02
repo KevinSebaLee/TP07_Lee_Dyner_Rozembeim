@@ -60,4 +60,14 @@ public static class Juego{
             return false;
         }
     }
+
+    public static Respuesta EncontrarRespuestaCorrecta(int idPregunta, int idRespuesta){
+        foreach(Respuesta r in Juego.Respuesta){
+            if(r.IdPregunta.Contains(idPregunta)){
+                if(r.Correcta == 1){
+                    return r;
+                }
+            }
+        }
+    }
 }
