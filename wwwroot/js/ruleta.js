@@ -50,7 +50,6 @@ function ingresarUsuario(){
         ruleta.style.visibility="visible";
     }
     else{
-        botonNombre.disabled = true;
     }
 }
 

@@ -48,8 +48,6 @@ public class BD{
             {
                 List<Respuestas> respuestasPorPregunta = db.Query<Respuestas>(query, new { @id = pregunta.IdPregunta }).ToList();
                 Respuesta.AddRange(respuestasPorPregunta);
-
-                Console.WriteLine(respuestasPorPregunta);
             }
         }
 
