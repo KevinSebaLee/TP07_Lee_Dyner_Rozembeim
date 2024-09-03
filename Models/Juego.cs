@@ -2,6 +2,7 @@ public static class Juego{
     public static string Username {get; set;}
     public static int PuntajeActual {get; set;}
     public static int CantidadPreguntasCorrectas {get; set;}
+    public static Categorias categoriaElegida {get; set;}
     public static List<Preguntas> Pregunta {get; set;}
     public static List<Respuestas> Respuesta {get; set;}
 
@@ -31,8 +32,6 @@ public static class Juego{
     public static Preguntas ObtenerProximaPregunta(){
         Random rnd = new Random();
         int SeleccionarPreguntaRnd = rnd.Next(0, Pregunta.Count());
-
-        Console.WriteLine(SeleccionarPreguntaRnd);
 
         return Pregunta[SeleccionarPreguntaRnd];
     }

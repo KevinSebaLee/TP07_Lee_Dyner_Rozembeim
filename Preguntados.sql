@@ -5,7 +5,8 @@ USE PREGUNTADOS;
 CREATE TABLE Categorias(
     IdCategoria INT NOT NULL PRIMARY KEY IDENTITY(1, 1),
     Nombre VARCHAR(200) NOT NULL,
-    Foto TEXT NOT NULL
+    Foto TEXT NOT NULL,
+    ColorFondo TEXT NOT NULL
 );
 
 CREATE TABLE Dificultades(
@@ -51,10 +52,10 @@ INSERT INTO Dificultades (Nombre) VALUES
 ('Dificil');
 
 
-INSERT INTO Categorias(Nombre,Foto) VALUES 
-('Futbol Europeo', 'https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2022%2F0211%2Fr973052_1296x729_16%2D9.jpg'),
-('Futbol Sudamericano', 'https://resizer.glanacion.com/resizer/v2/el-gol-de-K72K6KDI6JFG3NLOF7F4EBDNAI.jpg?auth=1a097fa58d9ca6ca5a70364edaccc282fcc190204ee70f6492d5802ac6d0ca8d&width=880&height=586&quality=70&smart=true'),
-('Decada 2000','https://www.coervercoaching.com/wp-content/uploads/2019/02/Ronaldinho_Real_Madrid-Milan-e1549895206735-1024x655.jpg') ;
+INSERT INTO Categorias(Nombre,Foto,ColorFondo) VALUES 
+('Futbol Europeo', 'https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2022%2F0211%2Fr973052_1296x729_16%2D9.jpg', '#6B5B95'),
+('Futbol Sudamericano', 'https://resizer.glanacion.com/resizer/v2/el-gol-de-K72K6KDI6JFG3NLOF7F4EBDNAI.jpg?auth=1a097fa58d9ca6ca5a70364edaccc282fcc190204ee70f6492d5802ac6d0ca8d&width=880&height=586&quality=70&smart=true', '#FF6F61'),
+('Decada 2000','https://www.coervercoaching.com/wp-content/uploads/2019/02/Ronaldinho_Real_Madrid-Milan-e1549895206735-1024x655.jpg', '#88B04B') ;
 
 INSERT INTO Preguntas(IdCategoria, IdDificultad, Enunciado, Foto) VALUES
 (1,1,'¿Cuál es el nombre del torneo de clubes más prestigioso de Europa?', 'https://www.ole.com.ar/2019/05/08/RxAcoR1ih_720x0__1.jpg'),

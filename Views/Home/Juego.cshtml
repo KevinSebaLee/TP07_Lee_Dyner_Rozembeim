@@ -1,5 +1,11 @@
-<h1>@ViewBag.nombreUsuario</h1>
-<h3>@ViewBag.Puntaje</h3>
+<header style="">
+    <div class="d-flex justify-content-start">
+        <h1 class="me-1">@ViewBag.nombreUsuario</h1>
+        <div class="d-flex align-items-center">
+            <h3>- Puntos: @ViewBag.Puntaje</h3>
+        </div>
+    </div>
+</header>
 
 <h3>@ViewBag.PreguntaActual</h3>
 <form action='Url.ACtion("VerificarRespuesta", "Home", new{idPregunta = ViewBag.PreguntaActual.IdPregunta})' method="post">
