@@ -25,8 +25,6 @@ public static class Juego{
 
         Pregunta = BD.ObtenerPreguntas(Dificultad, Categoria);
         Respuesta = BD.ObtenerRespuestas(Pregunta);
-
-        Console.WriteLine(Dificultad);
     }
 
     public static Preguntas ObtenerProximaPregunta(){

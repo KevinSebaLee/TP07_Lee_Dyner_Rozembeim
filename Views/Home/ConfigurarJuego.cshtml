@@ -20,7 +20,7 @@
             <div class=" d-flex align-items-center justify-content-center">
                 <select name="Dificultad">
                     @foreach(Dificultades d in ViewBag.Dificultades){
-                        <option value=@d.IdDificultad>@d.Nombre</option>
+                        <option value= "@d.IdDificultad"> @d.Nombre </option>
                     }
                 </select>
             </div>

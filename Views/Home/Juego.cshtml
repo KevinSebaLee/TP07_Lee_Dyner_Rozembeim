@@ -1,15 +1,21 @@
-<header style="">
-    <div class="d-flex justify-content-start">
-        <h1 class="me-1">@ViewBag.nombreUsuario</h1>
-        <div class="d-flex align-items-center">
-            <h3>- Puntos: @ViewBag.Puntaje</h3>
+<main class= "juego">
+    <header>
+        <div class="d-flex justify-content-between">
+            <div>
+                <h3 class="nombreUsuario bg-white">@ViewBag.nombreUsuario</h3>
+            </div>
+            <div>
+                <h3 class="puntaje bg-white">Puntos: @ViewBag.Puntaje</h3>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<h3>@ViewBag.PreguntaActual</h3>
-<form action='Url.ACtion("VerificarRespuesta", "Home", new{idPregunta = ViewBag.PreguntaActual.IdPregunta})' method="post">
-    @foreach(Respuestas r in ViewBag.RespuestaPregunta){
-        <button name="idRespuesta" value="@r.IdRespuesta"> @r.Contenido</button>
-    }
-</form>
+    <h3 class="pregunta">@ViewBag.PreguntaActual.Enunciado</h3>
+    <div class ="Opciones">
+        <form action='Url.ACtion("VerificarRespuesta", "Home", new{idPregunta = ViewBag.PreguntaActual.IdPregunta})' method="post">
+            @foreach(Respuestas r in ViewBag.RespuestaPregunta){
+                <button class="respuesta-btn" name="idRespuesta" value="@r.IdRespuesta"> @r.Contenido</button>
+            }
+        </form>
+    </div>
+</main>
