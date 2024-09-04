@@ -35,6 +35,10 @@ public static class Juego{
         return Pregunta[SeleccionarPreguntaRnd];
     }
 
+    public static Preguntas EncontrarPregunta(int idPregunta){
+        return Pregunta[idPregunta];
+    }
+
     public static List<Respuestas> ObtenerProximasRespuestas(int idPregunta)
     {
         List<Respuestas> PosiblesRespuestas = new List<Respuestas>();

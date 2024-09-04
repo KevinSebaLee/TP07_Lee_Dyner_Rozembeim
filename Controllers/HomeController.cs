@@ -33,7 +33,7 @@ public class HomeController : Controller
         ViewBag.nombreUsuario = Juego.Username;
         ViewBag.Puntaje = Juego.PuntajeActual;
 
-        Console.WriteLine(Juego.Username);
+        Console.WriteLine(ViewBag.PreguntaActual.Enunciado);
 
         return View("Juego");
     }
@@ -68,6 +68,13 @@ public class HomeController : Controller
 
     public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta){
         ViewBag.Correcto = Juego.VerificarRespuestas(idPregunta, idRespuesta);
+        ViewBag.PreguntaActual = Juego.EncontrarPregunta(idPregunta);
+        ViewBag.RespuestaPregunta = Juego.ObtenerProximasRespuestas(idPregunta);
+        ViewBag.nombreUsuario = Juego.Username;
+        ViewBag.Puntaje = Juego.PuntajeActual;
+
+        Console.WriteLine(idPregunta);
+        Console.WriteLine(ViewBag.PreguntaActual.Enunciado);
         
         return View("Respuesta");
     }

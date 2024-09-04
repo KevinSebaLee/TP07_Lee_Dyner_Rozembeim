@@ -45,16 +45,18 @@
   margin: 2%;
   text-align: center;
   color: black;
-  
 }
+
 .enviar{
   margin-bottom: 2%;
 }
+
 .juego{
   min-width: 100vw;
   min-height: 100vh;
 }
-.nombreUsuario{
+
+.nombreUsuario, .puntaje{
   margin: 30px;
   font-size: 30px; /* Tamaño del texto */
   color: #000000; /* Color del texto */
@@ -67,15 +69,6 @@
   
 }
 .puntaje{
-  margin: 30px;
-  font-size: 30px; /* Tamaño del texto */
-  color: #000000; /* Color del texto */
-  padding: 10px;
-  border-radius: 20px; /* Esquinas redondeadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra del texto */
-  display: inline-block;
-  text-transform: uppercase; /* Transforma el texto a mayúsculas */
-  letter-spacing: 2px; /* Espaciado entre letras */
   display: flex;
   
 }
