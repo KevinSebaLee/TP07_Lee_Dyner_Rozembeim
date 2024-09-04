@@ -51,18 +51,15 @@
   margin-bottom: 2%;
 }
 .juego{
-background-color: red;
-
+  min-width: 100vw;
+  min-height: 100vh;
 }
 .nombreUsuario{
-  
   margin: 30px;
-  font-family: 'Arial', sans-serif; /* Puedes cambiar la fuente si quieres */
   font-size: 30px; /* Tamaño del texto */
   color: #000000; /* Color del texto */
   padding: 10px;
-  border: solid 1px;
-  border-radius: 10px; /* Esquinas redondeadas */
+  border-radius: 20px; /* Esquinas redondeadas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra del texto */
   display: inline-block;
   text-transform: uppercase; /* Transforma el texto a mayúsculas */
@@ -71,12 +68,10 @@ background-color: red;
 }
 .puntaje{
   margin: 30px;
-  font-family: 'Arial', sans-serif; /* Puedes cambiar la fuente si quieres */
   font-size: 30px; /* Tamaño del texto */
   color: #000000; /* Color del texto */
   padding: 10px;
-  border: solid 1px;
-  border-radius: 10px; /* Esquinas redondeadas */
+  border-radius: 20px; /* Esquinas redondeadas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra del texto */
   display: inline-block;
   text-transform: uppercase; /* Transforma el texto a mayúsculas */
@@ -85,15 +80,15 @@ background-color: red;
   
 }
 .pregunta{
-
-border: solid #fff 1px;
-margin-left: 20%;
-margin-right: 20%;
-margin-bottom:5%;
-padding: 100px;
-background-color: #fff;
-border-radius: 50px;
+  border: solid #fff 1px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom:5%;
+  padding: 100px;
+  background-color: #fff;
+  border-radius: 50px;
 }
+
 .Opciones{
   display: flex;
   justify-content: center; /* Centra el formulario horizontalmente */
@@ -103,20 +98,21 @@ border-radius: 50px;
 }
 .respuesta-btn {
   background-color: #ffffff; /* Fondo azul para los botones */
-    color: rgb(0, 0, 0); /* Texto blanco */
-    border: none; /* Sin borde */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 15px; /* Espaciado interno */
-    font-size: 1.2rem; /* Tamaño del texto */
-    cursor: pointer; /* Cursor en forma de mano para indicar clic */
-    text-align: left; /* Alinea el texto a la izquierda dentro del botón */
-    width: 100%; /* Botón ocupa todo el ancho del contenedor */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    margin: 20px;
-    margin-top: 0px;
-    margin-bottom: 30px;
+  color: rgb(0, 0, 0); /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 15px; /* Espaciado interno */
+  font-size: 1.2rem; /* Tamaño del texto */
+  text-align: left; /* Alinea el texto a la izquierda dentro del botón */
+  min-width: 50vw; /* Botón ocupa todo el ancho del contenedor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  margin: 10px;
+  margin-left: 25%;
+  margin-bottom: 30px;
+  transition: all 0.5s;
 }
-.respuesta-btn :hover{
-  background-color: #2980b9; /* Color de fondo azul oscuro en hover */
+
+.respuesta-btn:hover{
+  background-color: gainsboro; /* Color de fondo azul oscuro en hover */
     transform: scale(1.05); /* Efecto de aumento en hover */
 }

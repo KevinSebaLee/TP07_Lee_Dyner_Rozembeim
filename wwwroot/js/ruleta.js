@@ -10,6 +10,7 @@ const ruleta = document.getElementById("ruleta");
 const botonNombre = document.getElementById("botonUsuario");
 const nombre = document.getElementById("nombreUsuario");
 const Jugar = document.getElementById("button");
+const categoriasTocada = document.getElementById("categoriaElegida");
 
 let Categoria = document.getElementById("categorias");
 
@@ -67,6 +68,8 @@ function girarRuleta() {
         const indiceGanador = Math.floor(numSecciones - (anguloFinal / 360) * numSecciones) % numSecciones;
         
         Jugar.style.visibility="visible";
+
+        categoriasTocada.value = categorias[indiceGanador];
 
         if(categorias[indiceGanador] === "Futbol Europeo"){
             Categoria.value = 1;

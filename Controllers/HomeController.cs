@@ -33,14 +33,30 @@ public class HomeController : Controller
         ViewBag.nombreUsuario = Juego.Username;
         ViewBag.Puntaje = Juego.PuntajeActual;
 
-        Console.WriteLine(ViewBag.PreguntaActual);
+        Console.WriteLine(Juego.Username);
 
         return View("Juego");
     }
 
-    public IActionResult Comenzar(string Username, int Dificultad, int Categoria)
+    public IActionResult Comenzar(string Username, int Dificultad, int Categoria, string Categorias)
     {
         Juego.CargarPartidas(Username, Dificultad, Categoria);
+
+        Juego.categoriaNombre = Categorias;
+
+        if(Categorias == "Futbol Europeo"){
+            Juego.categoriaElegida = "#6B5B95";
+        }
+        else if(Categorias == "Futbol Sudamericano")
+        {
+            Juego.categoriaElegida = "#FF6F61";
+        }else if(Categorias == "Decada 2000")
+        {
+            Juego.categoriaElegida = "#88B04B";
+        }else
+        {
+            Juego.categoriaElegida = "#F7CAC9";
+        }
 
         if(Juego.Pregunta.Count() == 0){
             return RedirectToAction("ConfigurarJuego");
@@ -51,7 +67,7 @@ public class HomeController : Controller
     }
 
     public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta){
-        ViewBag.Correcto = Juego.VerificarRespuesta(idPregunta, idRespuesta);
+        ViewBag.Correcto = Juego.VerificarRespuestas(idPregunta, idRespuesta);
         
         return View("Respuesta");
     }

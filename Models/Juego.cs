@@ -2,7 +2,8 @@ public static class Juego{
     public static string Username {get; set;}
     public static int PuntajeActual {get; set;}
     public static int CantidadPreguntasCorrectas {get; set;}
-    public static Categorias categoriaElegida {get; set;}
+    public static string categoriaElegida {get; set;}
+    public static string categoriaNombre {get; set;}
     public static List<Preguntas> Pregunta {get; set;}
     public static List<Respuestas> Respuesta {get; set;}
 
@@ -47,7 +48,7 @@ public static class Juego{
         return PosiblesRespuestas;
     }
 
-    public static bool VerificarRespuesta(int idPregunta, int idRespuesta){
+    public static bool VerificarRespuestas(int idPregunta, int idRespuesta){
         if(Pregunta[idPregunta].IdPregunta == Respuesta[idPregunta].IdPregunta){
             PuntajeActual++;
             Pregunta.RemoveAt(idPregunta);
@@ -64,7 +65,7 @@ public static class Juego{
         Respuestas respuesta = null;
 
         foreach(Respuestas r in Juego.Respuesta){
-            if(VerificarRespuesta(r.IdPregunta, r.IdRespuesta)){
+            if(VerificarRespuestas(r.IdPregunta, r.IdRespuesta)){
                 respuesta = r;
             }
         }
