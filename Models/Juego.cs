@@ -36,16 +36,11 @@ public static class Juego{
     }
 
     public static Preguntas EncontrarPregunta(int idPregunta){
-        Preguntas preguntas = null;
-        
-        foreach(Preguntas p in Pregunta){
-            if(p.IdPregunta == idPregunta){
-                preguntas = p;
-            }
-        }
+        Preguntas pregunta = Pregunta.FirstOrDefault(p => p.IdPregunta == idPregunta);
 
-        return preguntas;
+        return pregunta;
     }
+
 
     public static List<Respuestas> ObtenerProximasRespuestas(int idPregunta)
     {
@@ -61,14 +56,22 @@ public static class Juego{
     }
 
     public static bool VerificarRespuestas(int idPregunta, int idRespuesta){
-        if(Pregunta[idPregunta].IdPregunta == Respuesta[idPregunta].IdPregunta){
-            PuntajeActual++;
-            Pregunta.RemoveAt(idPregunta);
-            Pregunta.RemoveAt(idRespuesta);
-
-            return true;
+        Preguntas pregunta = EncontrarPregunta(idPregunta);
+        if (pregunta == null) {
+            Console.WriteLine($"Pregunta con ID {idPregunta} no encontrada en VerificarRespuestas.");
+            return false;
         }
-        else{
+
+        Respuestas respuestaCorrecta = Respuesta.FirstOrDefault(r => r.IdPregunta == idPregunta && r.Correcta);
+        if (respuestaCorrecta == null) {
+            return false;
+        }
+
+        if (respuestaCorrecta.IdRespuesta == idRespuesta) {
+            PuntajeActual++;
+            CantidadPreguntasCorrectas++;
+            return true;
+        } else {
             return false;
         }
     }
