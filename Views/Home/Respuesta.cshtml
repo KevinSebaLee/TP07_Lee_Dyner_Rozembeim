@@ -1,3 +1,20 @@
+@{
+    string ColorBackground;
+
+    if(ViewBag.Correcto){
+        ColorBackground = "#008000";
+    }
+    else{
+        ColorBackground = "#FF0000";
+    }
+}
+<head>
+    <script>
+        setTimeout(function(){
+            window.location.href = '@Url.Action("Jugar", "Home")';
+        }, 1000)
+    </script>
+</head>
 <main class= "juego" style="background-color: @Juego.categoriaElegida">
     <header>
         <div class="d-flex justify-content-between">
@@ -15,10 +32,14 @@
 
     <h3 class="pregunta bg-white">@ViewBag.PreguntaActual.Enunciado</h3>
     <div class ="Opciones">
-        <form action='@Url.Action("")'>
-            @foreach(Respuestas r in ViewBag.RespuestaPregunta){
-                <button class="respuesta-btn" name="idRespuesta" value="@r.IdRespuesta">@r.Contenido</button>
+        @foreach(Respuestas r in ViewBag.RespuestaPregunta){
+            <button class="respuesta-btn-correcto" name="idRespuesta" value="@r.IdRespuesta" style="background-color: @ColorBackground;">@r.Contenido</button>
+            if(ViewBag.IdRespuesta == r.IdRespuesta){
+                <style>
+                    button {background-color:@ColorBackground}
+                </style>
             }
-        </form>
+        }
     </div>
 </main>
+

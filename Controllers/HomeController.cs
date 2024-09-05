@@ -65,6 +65,7 @@ public class HomeController : Controller
     }
 
     public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta){
+        ViewBag.IdRespuesta = idRespuesta;
         ViewBag.Correcto = Juego.VerificarRespuestas(idPregunta, idRespuesta);
         ViewBag.PreguntaActual = Juego.EncontrarPregunta(idPregunta);
         ViewBag.RespuestaPregunta = Juego.ObtenerProximasRespuestas(idPregunta);

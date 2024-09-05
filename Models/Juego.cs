@@ -55,21 +55,14 @@ public static class Juego{
         return PosiblesRespuestas;
     }
 
-    public static bool VerificarRespuestas(int idPregunta, int idRespuesta){
-        Preguntas pregunta = EncontrarPregunta(idPregunta);
-        if (pregunta == null) {
-            Console.WriteLine($"Pregunta con ID {idPregunta} no encontrada en VerificarRespuestas.");
-            return false;
-        }
-
+    public static bool VerificarRespuestas(int idPregunta, int idRespuesta)
+    {
         Respuestas respuestaCorrecta = Respuesta.FirstOrDefault(r => r.IdPregunta == idPregunta && r.Correcta);
-        if (respuestaCorrecta == null) {
-            return false;
-        }
 
         if (respuestaCorrecta.IdRespuesta == idRespuesta) {
             PuntajeActual++;
             CantidadPreguntasCorrectas++;
+
             return true;
         } else {
             return false;
