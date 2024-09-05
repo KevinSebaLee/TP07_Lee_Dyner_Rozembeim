@@ -36,7 +36,15 @@ public static class Juego{
     }
 
     public static Preguntas EncontrarPregunta(int idPregunta){
-        return Pregunta[idPregunta];
+        Preguntas preguntas = null;
+        
+        foreach(Preguntas p in Pregunta){
+            if(p.IdPregunta == idPregunta){
+                preguntas = p;
+            }
+        }
+
+        return preguntas;
     }
 
     public static List<Respuestas> ObtenerProximasRespuestas(int idPregunta)

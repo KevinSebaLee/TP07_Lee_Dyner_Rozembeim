@@ -26,29 +26,16 @@
 }
 
 .formulario{
-  border: 3px solid greenyellow;
-  background-color: white;
-  align-items: center;  
-  max-width: 50vw; 
   margin-top: 8%;
-  border-radius: 10px;
-  
+  border-radius: 30px;
 }
 
 .titulo{
   text-align: left; 
-  font-family: Arial Black; 
-  font-weight: bold; 
-  font-size: 30px; 
-  color: #fff; 
+  font-family: Arial Black;
+  font-size: 30px;
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
   margin: 2%;
-  text-align: center;
-  color: black;
-}
-
-.enviar{
-  margin-bottom: 2%;
 }
 
 .juego{
@@ -65,33 +52,22 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra del texto */
   display: inline-block;
   text-transform: uppercase; /* Transforma el texto a mayúsculas */
-  letter-spacing: 2px; /* Espaciado entre letras */
-  
+  letter-spacing: 2px; /* Espaciado entre letras */  
 }
-.puntaje{
-  display: flex;
-  
-}
+
 .pregunta{
-  border: solid #fff 1px;
   margin-left: 20%;
   margin-right: 20%;
   margin-bottom:5%;
   padding: 100px;
-  background-color: #fff;
   border-radius: 50px;
 }
 
 .Opciones{
-  display: flex;
-  justify-content: center; /* Centra el formulario horizontalmente */
-  align-items: center; /* Centra el formulario verticalmente */
   padding: 20px;
-
 }
+
 .respuesta-btn {
-  background-color: #ffffff; /* Fondo azul para los botones */
-  color: rgb(0, 0, 0); /* Texto blanco */
   border: none; /* Sin borde */
   border-radius: 8px; /* Bordes redondeados */
   padding: 15px; /* Espaciado interno */

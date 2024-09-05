@@ -16,7 +16,6 @@
     <h3 class="pregunta">@ViewBag.PreguntaActual.Enunciado</h3>
     <div class ="Opciones">
         <form action='@Url.Action("")'>
-            <input type="hidden" name="idPregunta" value="@ViewBag.PreguntaActual.IdPregunta">
             @foreach(Respuestas r in ViewBag.RespuestaPregunta){
                 <button class="respuesta-btn" name="idRespuesta" value="@r.IdRespuesta">@r.Contenido</button>
             }
