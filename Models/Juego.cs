@@ -59,13 +59,13 @@ public static class Juego{
     public static bool VerificarRespuestas(int idPregunta, int idRespuesta)
     {
         Respuestas respuestaCorrecta = Respuesta.FirstOrDefault(r => r.IdPregunta == idPregunta && r.Correcta);
+        Preguntas pregunta = Pregunta.FirstOrDefault(p => p.IdPregunta == idPregunta);
+        
+        Pregunta.Remove(pregunta);
 
         if (respuestaCorrecta.IdRespuesta == idRespuesta) {
             PuntajeActual++;
             CantidadPreguntasCorrectas++;
-            
-            Preguntas pregunta = Pregunta.FirstOrDefault(p => p.IdPregunta == idPregunta);
-            Pregunta.Remove(pregunta);
 
             return true;
         } else {
