@@ -63,6 +63,7 @@ public static class Juego{
         if (respuestaCorrecta.IdRespuesta == idRespuesta) {
             PuntajeActual++;
             CantidadPreguntasCorrectas++;
+            
             Preguntas pregunta = Pregunta.FirstOrDefault(p => p.IdPregunta == idPregunta);
             Pregunta.Remove(pregunta);
 

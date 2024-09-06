@@ -66,11 +66,11 @@ public class HomeController : Controller
 
     public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta){
         ViewBag.IdRespuesta = idRespuesta;
-        ViewBag.Correcto = Juego.VerificarRespuestas(idPregunta, idRespuesta);
         ViewBag.PreguntaActual = Juego.EncontrarPregunta(idPregunta);
         ViewBag.RespuestaPregunta = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.IdPregunta);
         ViewBag.nombreUsuario = Juego.Username;
         ViewBag.Puntaje = Juego.PuntajeActual;
+        ViewBag.Correcto = Juego.VerificarRespuestas(idPregunta, idRespuesta);
         
         return View("Respuesta");
     }
