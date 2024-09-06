@@ -38,7 +38,7 @@ AS
 BEGIN
 	IF(@idCategoria != 4)
 		BEGIN
-			SELECT * FROM Preguntas WHERE @idCategoria = idCategoria;
+			SELECT * FROM Preguntas WHERE @idCategoria = idCategoria AND @idDificultad = idDificultad;
 		END
 	ELSE
 		BEGIN

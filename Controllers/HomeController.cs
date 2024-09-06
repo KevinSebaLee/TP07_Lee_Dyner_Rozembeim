@@ -68,7 +68,7 @@ public class HomeController : Controller
         ViewBag.IdRespuesta = idRespuesta;
         ViewBag.Correcto = Juego.VerificarRespuestas(idPregunta, idRespuesta);
         ViewBag.PreguntaActual = Juego.EncontrarPregunta(idPregunta);
-        ViewBag.RespuestaPregunta = Juego.ObtenerProximasRespuestas(idPregunta);
+        ViewBag.RespuestaPregunta = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.IdPregunta);
         ViewBag.nombreUsuario = Juego.Username;
         ViewBag.Puntaje = Juego.PuntajeActual;
         

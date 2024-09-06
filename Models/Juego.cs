@@ -45,6 +45,7 @@ public static class Juego{
     public static List<Respuestas> ObtenerProximasRespuestas(int idPregunta)
     {
         List<Respuestas> PosiblesRespuestas = new List<Respuestas>();
+        
 
         foreach(Respuestas r in Respuesta){
             if(r.IdPregunta == idPregunta){
@@ -62,22 +63,12 @@ public static class Juego{
         if (respuestaCorrecta.IdRespuesta == idRespuesta) {
             PuntajeActual++;
             CantidadPreguntasCorrectas++;
+            Preguntas pregunta = Pregunta.FirstOrDefault(p => p.IdPregunta == idPregunta);
+            Pregunta.Remove(pregunta);
 
             return true;
         } else {
             return false;
         }
-    }
-
-    public static Respuestas EncontrarRespuestaCorrecta(int idPregunta, int idRespuesta){
-        Respuestas respuesta = null;
-
-        foreach(Respuestas r in Juego.Respuesta){
-            if(VerificarRespuestas(r.IdPregunta, r.IdRespuesta)){
-                respuesta = r;
-            }
-        }
-
-        return respuesta;
     }
 }
