@@ -1,10 +1,11 @@
 @{
-    string ColorBackground;
+    string ColorBackground, ColorCorrecto = null;
 
     if(ViewBag.Correcto){
         ColorBackground = "#008000";
     }
     else{
+        ColorCorrecto = "#008000";
         ColorBackground = "#FF0000";
     }
 }
@@ -40,7 +41,15 @@
                 </style>
             }
             else{
-                <button class="respuesta-btn-correcto" name="idRespuesta" value="@r.IdRespuesta">@r.Contenido</button>
+                if(r.Correcta){
+                    <button class="respuesta-btn-correctoFalse" name="idRespuesta" value="@r.IdRespuesta">@r.Contenido</button>
+                    <style>
+                        .respuesta-btn-correctoFalse {background-color:@ColorCorrecto}
+                    </style>
+                }
+                else{
+                    <button class="respuesta-btn-correcto" name="idRespuesta" value="@r.IdRespuesta">@r.Contenido</button>
+                }
             }
         }
     </div>

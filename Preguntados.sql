@@ -36,20 +36,25 @@ CREATE PROCEDURE Sp_ObtenerPreguntas
     @idCategoria INT
 AS
 BEGIN
-	IF(@idCategoria != 4)
+	IF(@idCategoria != 4 AND @idDificultad != 4)
 		BEGIN
 			SELECT * FROM Preguntas WHERE @idCategoria = idCategoria AND @idDificultad = idDificultad;
 		END
-	ELSE
+	ELSE IF(@idDificultad != 4)
 		BEGIN
-			SELECT * FROM Preguntas
+			SELECT * FROM Preguntas WHERE @idDificultad = idDificultad;
 		END
+    ELSE
+        BEGIN
+            SELECT * FROM Preguntas;
+        END
 END
 
 INSERT INTO Dificultades (Nombre) VALUES 
 ('Facil'),
 ('Medio'),
-('Dificil');
+('Dificil'),
+('Todos');
 
 
 INSERT INTO Categorias(Nombre,Foto,ColorFondo) VALUES 

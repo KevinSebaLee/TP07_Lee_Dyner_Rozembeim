@@ -67,7 +67,7 @@
   padding: 20px;
 }
 
-.respuesta-btn, .respuesta-btn-correcto, .respuesta-btn-correctoTrue{
+.respuesta-btn, .respuesta-btn-correcto, .respuesta-btn-correctoTrue, .respuesta-btn-correctoFalse{
   border: none; 
   border-radius: 8px;
   padding: 15px;
