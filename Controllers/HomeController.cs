@@ -68,7 +68,8 @@ public class HomeController : Controller
         }
     }
 
-    public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta){
+    public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta, int[] ordenPreguntas){
+        ViewBag.OrdenPreguntas = ordenPreguntas;
         ViewBag.IdRespuesta = idRespuesta;
         ViewBag.PreguntaActual = Juego.EncontrarPregunta(idPregunta);
         ViewBag.RespuestaPregunta = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.IdPregunta);
