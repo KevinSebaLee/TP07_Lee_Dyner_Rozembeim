@@ -21,8 +21,8 @@
     <div class ="Opciones">
         <form action='@Url.Action("VerificarRespuesta")'>
             <input type="hidden" name="idPregunta" value="@ViewBag.PreguntaActual.IdPregunta">
-            @foreach(Respuestas r in ViewBag.RespuestaPregunta){
-                <button class="respuesta-btn" name="idRespuesta" value="@r.IdRespuesta">@r.Contenido</button>
+            @for(int i = 0; i < ViewBag.OrdenPreguntas.Length; i++){
+                <button class="respuesta-btn" name="idRespuesta" value="@ViewBag.RespuestaPregunta[ViewBag.OrdenPreguntas[i]].IdRespuesta">@ViewBag.RespuestaPregunta[ViewBag.OrdenPreguntas[i]].Contenido</button>
             }
         </form>
     </div>

@@ -45,7 +45,6 @@ public static class Juego{
     public static List<Respuestas> ObtenerProximasRespuestas(int idPregunta)
     {
         List<Respuestas> PosiblesRespuestas = new List<Respuestas>();
-        
 
         foreach(Respuestas r in Respuesta){
             if(r.IdPregunta == idPregunta){
