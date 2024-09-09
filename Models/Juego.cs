@@ -52,6 +52,8 @@ public static class Juego{
             }
         }
 
+        PosiblesRespuestas = PosiblesRespuestas.OrderBy(x=> Random.Shared.Next()).ToList();
+
         return PosiblesRespuestas;
     }
 

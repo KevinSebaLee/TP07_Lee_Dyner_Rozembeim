@@ -33,22 +33,22 @@
 
     <h3 class="pregunta bg-white">@ViewBag.PreguntaActual.Enunciado</h3>
     <div class ="Opciones">
-        @for(int i = 0; i < ViewBag.OrdenPreguntas.Length; i++){
-            if(ViewBag.IdRespuesta == ViewBag.RespuestaPregunta[ViewBag.OrdenPreguntas[i]].IdRespuesta){
-                <button class="respuesta-btn-correctoTrue" name="idRespuesta" value="@ViewBag.RespuestaPregunta[ViewBag.OrdenPreguntas[i]].IdRespuesta">@ViewBag.RespuestaPregunta[ViewBag.OrdenPreguntas[i]].Contenido</button>
+        @foreach(Respuestas r in ViewBag.RespuestaPregunta){
+            if(ViewBag.IdRespuesta == r.IdRespuesta){
+                <button class="respuesta-btn-correctoTrue" name="idRespuesta" value="@r.IdRespuesta">@r.Contenido</button>
                 <style>
                     .respuesta-btn-correctoTrue {background-color:@ColorBackground}
                 </style>
             }
             else{
-                if(ViewBag.RespuestaPregunta[ViewBag.OrdenPreguntas[i]].Correcta){
-                    <button class="respuesta-btn-correctoFalse" name="idRespuesta" value="@ViewBag.RespuestaPregunta[ViewBag.OrdenPreguntas[i]].IdRespuesta">@ViewBag.RespuestaPregunta[ViewBag.OrdenPreguntas[i]].Contenido</button>
+                if(r.Correcta){
+                    <button class="respuesta-btn-correctoFalse" name="idRespuesta" value="@r.IdRespuesta">@r.Contenido</button>
                     <style>
                         .respuesta-btn-correctoFalse {background-color:@ColorCorrecto}
                     </style>
                 }
                 else{
-                    <button class="respuesta-btn-correcto" name="idRespuesta" value="@ViewBag.RespuestaPregunta[ViewBag.OrdenPreguntas[i]].IdRespuesta">@ViewBag.RespuestaPregunta[ViewBag.OrdenPreguntas[i]].Contenido</button>
+                    <button class="respuesta-btn-correcto" name="idRespuesta" value="@r.IdRespuesta">@r.Contenido</button>
                 }
             }
         }

@@ -28,10 +28,6 @@ public class HomeController : Controller
     }
 
     public IActionResult Jugar(){
-        Random rnd = new Random();
-        int[] ordenPreguntas = GenerateUniqueRandomNumbers(4, rnd);
-
-        ViewBag.OrdenPreguntas = ordenPreguntas;
         ViewBag.PreguntaActual = Juego.ObtenerProximaPregunta();
         ViewBag.RespuestaPregunta = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.IdPregunta);
         ViewBag.nombreUsuario = Juego.Username;
@@ -68,8 +64,7 @@ public class HomeController : Controller
         }
     }
 
-    public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta, int[] ordenPreguntas){
-        ViewBag.OrdenPreguntas = ordenPreguntas;
+    public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta){
         ViewBag.IdRespuesta = idRespuesta;
         ViewBag.PreguntaActual = Juego.EncontrarPregunta(idPregunta);
         ViewBag.RespuestaPregunta = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.IdPregunta);
@@ -78,19 +73,5 @@ public class HomeController : Controller
         ViewBag.Correcto = Juego.VerificarRespuestas(idPregunta, idRespuesta);
         
         return View("Respuesta");
-    }
-
-    private int[] GenerateUniqueRandomNumbers(int size, Random rnd)
-    {
-        HashSet<int> orden = new HashSet<int>();
-        while (orden.Count < size)
-        {
-            orden.Add(rnd.Next(size));
-        }
-        
-        int[] result = new int[size];
-        orden.CopyTo(result);
-
-        return result;
     }
 }
