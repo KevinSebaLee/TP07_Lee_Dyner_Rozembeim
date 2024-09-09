@@ -1,5 +1,5 @@
 let tiempo = parseInt(localStorage.getItem('tiempo')) || 600;
-                    
+
 let timer = setInterval(function() {
     let minutes = Math.floor(tiempo / 60);
     let seconds = tiempo % 60;
