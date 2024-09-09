@@ -18,6 +18,10 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Fin(){
+        return View();
+    }
+
     public IActionResult ConfigurarJuego()
     {
         Juego.InicializarJuego();
@@ -42,7 +46,7 @@ public class HomeController : Controller
             return View("Juego");
         }
         else{
-            return View("Fin");
+            return RedirectToAction("Fin");
         }
     }
 
