@@ -46,7 +46,7 @@ public class HomeController : Controller
             return View("Juego");
         }
         else{
-            return RedirectToAction("Fin");
+            return View("Fin");
         }
     }
 
