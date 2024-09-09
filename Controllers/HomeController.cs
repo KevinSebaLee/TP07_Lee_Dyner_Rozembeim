@@ -28,12 +28,22 @@ public class HomeController : Controller
     }
 
     public IActionResult Jugar(){
-        ViewBag.PreguntaActual = Juego.ObtenerProximaPregunta();
-        ViewBag.RespuestaPregunta = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.IdPregunta);
-        ViewBag.nombreUsuario = Juego.Username;
         ViewBag.Puntaje = Juego.PuntajeActual;
 
-        return View("Juego");
+        if(Juego.Pregunta.Count > 0){
+            ViewBag.PreguntaActual = Juego.ObtenerProximaPregunta();
+            ViewBag.RespuestaPregunta = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.IdPregunta);
+            ViewBag.nombreUsuario = Juego.Username;
+
+            for(int i = 0; i < ViewBag.RespuestaPregunta.Count; i++){
+                AlmacenarDatos.PregunasOrden[i] = ViewBag.RespuestaPregunta[i];
+            }
+            
+            return View("Juego");
+        }
+        else{
+            return View("Fin");
+        }
     }
 
     public IActionResult Comenzar(string Username, int Dificultad, int Categoria, string Categorias)
@@ -67,7 +77,7 @@ public class HomeController : Controller
     public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta){
         ViewBag.IdRespuesta = idRespuesta;
         ViewBag.PreguntaActual = Juego.EncontrarPregunta(idPregunta);
-        ViewBag.RespuestaPregunta = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.IdPregunta);
+        ViewBag.RespuestaPregunta = AlmacenarDatos.PregunasOrden;
         ViewBag.nombreUsuario = Juego.Username;
         ViewBag.Puntaje = Juego.PuntajeActual;
         ViewBag.Correcto = Juego.VerificarRespuestas(idPregunta, idRespuesta);

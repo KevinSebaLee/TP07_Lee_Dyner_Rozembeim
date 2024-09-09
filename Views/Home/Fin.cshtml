@@ -2,6 +2,10 @@
     <div class="container">
         <img class="mb-5" src="~/img/Preguntados.png" height="300">
         <h1>¡Felicidades! Completaste el juego!</h1>
-        <h5>Puntaje: </h5>
+        <h4>Puntaje: @ViewBag.Puntaje</h4>
+
+        <form action='@Url.Action("ConfigurarJuego")'>
+            <button type="submit" class="btn btn-primary bg-warning border border-warning shadow-lg mt-4 Boton-Index" style="border-radius: 25px; width: 10vw; height:5vh;"><h2>Jugar</h2></button>
+        </form>
     </div>
 </div>

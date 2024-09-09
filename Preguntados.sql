@@ -276,7 +276,7 @@ values (29, 4, 'Club Universitario de Deportes', 1);
 
 -- Pregunta 30: ¿En qué año fue fundada la Confederación Sudamericana de Fútbol (CONMEBOL)?
 insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
-values (30, 1, '1916', 0);
+values (30, 1, '1920', 0);
 insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
 values (30, 2, '1919', 0);
 insert into Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
