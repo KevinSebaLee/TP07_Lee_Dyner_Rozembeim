@@ -22,6 +22,10 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult CrearPregunta(){
+        return View();
+    }
+
     public IActionResult ConfigurarJuego()
     {
         Juego.InicializarJuego();

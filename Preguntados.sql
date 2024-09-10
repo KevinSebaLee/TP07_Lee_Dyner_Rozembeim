@@ -31,6 +31,37 @@ CREATE TABLE Respuestas(
     Foto TEXT
 );
 
+CREATE PROCEDURE Sp_CrearPreguntas
+    @IdCategoria INT,
+    @IdDificultad INT,
+    @Enunciado VARCHAR(200),
+    @Respuesta1 VARCHAR(200),
+    @Opcion1 INT,
+    @Respuesta2 VARCHAR(200),
+    @Opcion2 INT,
+    @Respuesta3 VARCHAR(200),
+    @Opcion3 INT,
+    @Respuesta4 VARCHAR(200),
+    @Opcion4 INT,
+    @Correcta INT
+AS
+BEGIN
+    DECLARE 
+    @IdPregunta INT
+
+    INSERT INTO Preguntas(IdCategoria, IdDificultad, Enunciado) VALUES
+    (@IdCategoria, @IdDificultad, @Enunciado);
+
+    SET @IdPregunta = SCOPE_IDENTITY(); 
+
+    INSERT INTO Respuestas(IdPregunta, Opcion, Contenido, Correcta) 
+    VALUES
+    (@IdPregunta, @Opcion1, @Respuesta1, CASE WHEN @Opcion1 = @Correcta THEN 1 ELSE 0 END),
+    (@IdPregunta, @Opcion2, @Respuesta2, CASE WHEN @Opcion2 = @Correcta THEN 1 ELSE 0 END),
+    (@IdPregunta, @Opcion3, @Respuesta3, CASE WHEN @Opcion3 = @Correcta THEN 1 ELSE 0 END),
+    (@IdPregunta, @Opcion4, @Respuesta4, CASE WHEN @Opcion4 = @Correcta THEN 1 ELSE 0 END)
+END
+
 CREATE PROCEDURE Sp_ObtenerPreguntas
     @idDificultad INT,
     @idCategoria INT
