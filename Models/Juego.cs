@@ -28,6 +28,10 @@ public static class Juego{
         Respuesta = BD.ObtenerRespuestas(Pregunta);
     }
 
+    public static Preguntas CrearPreguntas(int idCategoria, int idDificultad, string Enunciado, string Respuesta1, string Respuesta2, string Respuesta3, string Respuesta4, int Opcion1, int Opcion2, int Opcion3, int Opcion4, int Correcta){
+        return BD.CrearPreguntas(idCategoria, idDificultad, Enunciado, Respuesta1, Respuesta2, Respuesta3, Respuesta4, Opcion1, Opcion2, Opcion3, Opcion4, Correcta);
+    }
+
     public static Preguntas ObtenerProximaPregunta(){
         Random rnd = new Random();
         int SeleccionarPreguntaRnd = rnd.Next(0, Pregunta.Count());
@@ -40,7 +44,6 @@ public static class Juego{
 
         return pregunta;
     }
-
 
     public static List<Respuestas> ObtenerProximasRespuestas(int idPregunta)
     {

@@ -1,7 +1,11 @@
 <head><link rel="stylesheet" href="~/css/ruleta.css" asp-append-version="true"/></head>
 
 <div class="confi">
-    <form id="Username" action='@Url.Action("Comenzar")' class="d-flex justify-content-center">
+    <form action='@Url.Action("Index")' class="ms-4">
+        <button type="submit" class="btn btn-primary bg-warning border border-warning mt-4" style="border-radius: 25px; width: 5vw; height: 5vh;">Volver</button>
+    </form>
+
+    <form id="Username" action='@Url.Action("Comenzar")' class="d-flex justify-content-center shadow">
         <div class="formulario bg-dark">
             <input type="hidden" name="Categoria" id="categorias">
             <input type="hidden" name="Categorias" id="categoriaElegida">

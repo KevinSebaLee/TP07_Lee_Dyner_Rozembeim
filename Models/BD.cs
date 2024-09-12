@@ -32,7 +32,7 @@ public class BD{
         string sp = "Sp_ObtenerPreguntas";
         using(SqlConnection db = new SqlConnection(_connectionString)){
             Pregunta = db.Query<Preguntas>(sp, new {@idCategoria = Categorias, @idDificultad = Dificultad}, commandType: System.Data.CommandType.StoredProcedure).ToList();
-        } 
+        }
 
         return Pregunta;
     }

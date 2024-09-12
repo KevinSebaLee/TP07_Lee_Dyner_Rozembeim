@@ -1,13 +1,17 @@
 .IndexFondo{
   background-image: url("../img/IndexBg.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .FinFondo{
   background-image: url("../img/FinBg.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
+}
+
+.CrearPreguntaFondo{
+  background-image: url("../img/CreadorPreguntas.jpg");
+  background-size: cover;
+  max-width: 100vw;
 }
 
 .Boton-Index{
@@ -17,6 +21,7 @@
 .Boton-Index:hover{
   transform: scale(1.2);
 }
+
 .confi{
   background-image: url("../img/formulario-img.jpg");
   background-repeat: no-repeat;
