@@ -64,11 +64,20 @@ public static class Juego{
     {
         Respuestas respuestaCorrecta = Respuesta.FirstOrDefault(r => r.IdPregunta == idPregunta && r.Correcta);
         Preguntas pregunta = Pregunta.FirstOrDefault(p => p.IdPregunta == idPregunta);
-        
+
         Pregunta.Remove(pregunta);
 
         if (respuestaCorrecta.IdRespuesta == idRespuesta) {
-            PuntajeActual++;
+            if(pregunta.IdDificultad == 1){
+                PuntajeActual++;
+            }
+            else if(pregunta.IdDificultad == 2){
+                PuntajeActual += 3;
+            }
+            else{
+                PuntajeActual += 5;
+            }
+
             CantidadPreguntasCorrectas++;
 
             return true;
