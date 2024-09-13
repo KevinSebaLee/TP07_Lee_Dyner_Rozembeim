@@ -1,3 +1,12 @@
-<div class="CrearPreguntaFondo" style="min-height: 100vh">
-    <p>a</p>
-</div>
+<form action='@Url.Action("CrearPregunta")'>
+    <div class="d-flex">
+        <input class="opcion" type="radio" id="opcion1" style="-webkit-appearance: none;" select>
+        <label class="d-flex justify-content-center align-items-center" for="opcion1" style="width: 33%; min-height: 7vh;">Decada 2000</label>
+
+        <input class="opcion" type="radio" id="opcion2" style="-webkit-appearance: none;">
+        <label class="d-flex justify-content-center align-items-center" for="opcion2" style="width: 33%">Futbol Europeo</label>
+
+        <input class="opcion" type="radio" id="opcion3" style="-webkit-appearance: none;">
+        <label class="d-flex justify-content-center align-items-center" for="opcion3" style="width: 33%">Futbol Sudamericano</label>
+    </div>
+</form>

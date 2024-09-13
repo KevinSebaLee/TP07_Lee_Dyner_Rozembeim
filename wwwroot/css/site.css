@@ -90,3 +90,9 @@
   background-color: gainsboro;
     transform: scale(1.05);
 }
+
+.opcion:checked{
+  label{
+    background-color: violet;
+  }
+}
