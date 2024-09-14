@@ -1,25 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\48044115\\Desktop\\TP07_Lee_Dyner_Rozembeim\\Preguntados.csproj": {}
+    "C:\\Users\\Tung Shu Lee\\Desktop\\TP07_Lee_Dyner_Rozembeim\\Preguntados.csproj": {}
   },
   "projects": {
-    "C:\\Users\\48044115\\Desktop\\TP07_Lee_Dyner_Rozembeim\\Preguntados.csproj": {
+    "C:\\Users\\Tung Shu Lee\\Desktop\\TP07_Lee_Dyner_Rozembeim\\Preguntados.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\48044115\\Desktop\\TP07_Lee_Dyner_Rozembeim\\Preguntados.csproj",
+        "projectUniqueName": "C:\\Users\\Tung Shu Lee\\Desktop\\TP07_Lee_Dyner_Rozembeim\\Preguntados.csproj",
         "projectName": "Preguntados",
-        "projectPath": "C:\\Users\\48044115\\Desktop\\TP07_Lee_Dyner_Rozembeim\\Preguntados.csproj",
-        "packagesPath": "C:\\Users\\48044115\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\48044115\\Desktop\\TP07_Lee_Dyner_Rozembeim\\obj\\",
+        "projectPath": "C:\\Users\\Tung Shu Lee\\Desktop\\TP07_Lee_Dyner_Rozembeim\\Preguntados.csproj",
+        "packagesPath": "C:\\Users\\Tung Shu Lee\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tung Shu Lee\\Desktop\\TP07_Lee_Dyner_Rozembeim\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\48044115\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Tung Shu Lee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,11 +40,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -71,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

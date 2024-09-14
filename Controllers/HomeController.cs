@@ -23,6 +23,8 @@ public class HomeController : Controller
     }
 
     public IActionResult CrearPregunta(){
+        ViewBag.Categorias = Juego.ObtenerCategorias();
+
         return View();
     }
 

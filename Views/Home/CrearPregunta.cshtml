@@ -1,12 +1,30 @@
+@{
+    int sumatoria = 0;
+}
+
 <form action='@Url.Action("CrearPregunta")'>
     <div class="d-flex">
-        <input class="opcion" type="radio" id="opcion1" style="-webkit-appearance: none;" select>
-        <label class="d-flex justify-content-center align-items-center" for="opcion1" style="width: 33%; min-height: 7vh;">Decada 2000</label>
+        @foreach(Categorias c in ViewBag.Categorias){
+            sumatoria++;
 
-        <input class="opcion" type="radio" id="opcion2" style="-webkit-appearance: none;">
-        <label class="d-flex justify-content-center align-items-center" for="opcion2" style="width: 33%">Futbol Europeo</label>
+            <div class="opcion d-flex justify-content-center" style="width: 34vw;">
+                <input type="radio" id="@sumatoria" name="idCategoria" value="@c.IdCategoria" />
+                <label for="@sumatoria">@c.Nombre</label>
+            </div>
+        }
+    </div>
 
-        <input class="opcion" type="radio" id="opcion3" style="-webkit-appearance: none;">
-        <label class="d-flex justify-content-center align-items-center" for="opcion3" style="width: 33%">Futbol Sudamericano</label>
+    <div class="container d-flex">
+        <h4>Su pregunta</h4>
+        <div class="d-flex justify-content-end">
+            <input type="text" name="Enunciado"/>
+        </div>
+    </div>
+
+    <div class="container d-flex">
+        <h4>Respuesta correcta</h4>
+        <div class="d-flex justify-content-end">
+            <input type="text" name="RespuestaCorrecta"/>
+        </div>
     </div>
 </form>
