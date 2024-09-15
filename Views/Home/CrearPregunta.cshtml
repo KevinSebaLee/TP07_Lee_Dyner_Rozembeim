@@ -2,29 +2,49 @@
     int sumatoria = 0;
 }
 
-<form action='@Url.Action("CrearPregunta")'>
-    <div class="d-flex">
+<form action='@Url.Action("CrearPregunta")' style="height: 100vh; background-color:gainsboro;">
+    <div class="d-flex bg-white">
         @foreach(Categorias c in ViewBag.Categorias){
             sumatoria++;
 
-            <div class="opcion d-flex justify-content-center" style="width: 34vw;">
-                <input type="radio" id="@sumatoria" name="idCategoria" value="@c.IdCategoria" />
-                <label for="@sumatoria">@c.Nombre</label>
+            <div class="opcion d-flex justify-content-center" style="width: 33vw; height: 7vh;">
+                @if(sumatoria == 1){
+                    <input type="radio" id="@sumatoria" name="idCategoria" value="@c.IdCategoria" checked/>
+                }
+                else{
+                    <input type="radio" id="@sumatoria" name="idCategoria" value="@c.IdCategoria" />
+                }
+                <label class="texto text-white" for="@sumatoria" style="font-size: 5rem + 2vw;"><b>@c.Nombre</b></label>
             </div>
         }
     </div>
 
-    <div class="container d-flex">
-        <h4>Su pregunta</h4>
-        <div class="d-flex justify-content-end">
-            <input type="text" name="Enunciado"/>
+    <div class="container mt-3">
+        <div class="d-flex justify-content-between">
+            <h4>Su pregunta</h4>
+            <input class="enunciado" type="text" name="Enunciado"/>
         </div>
-    </div>
 
-    <div class="container d-flex">
-        <h4>Respuesta correcta</h4>
-        <div class="d-flex justify-content-end">
-            <input type="text" name="RespuestaCorrecta"/>
+        <div class="mt-3">
+            <h4>Respuestas</h4>
+            @for(int i = 0; i < 4; i++){
+                <div class="d-flex">
+                    <h4 class="me-5 bg-dark text-white p-2">@(i + 1).</h4>
+                    <div style="width: 60%">
+                        <input class="contenido mb-3 pb-3" type="text" name="RespuestaCorrecta" style="width: 97%"/>
+                    </div>
+                    <div class="correcta d-flex justify-content-end">
+                        <div>
+                            <input type="radio" id="true @i" name="Correcta @i" value="0" checked/>
+                            <label class="respcorrecta bg-success p-2" for="true @i">✔</label>
+                        </div>
+                        <div class="ms-4">
+                            <input type="radio" id="false @i" name="Correcta @i" value="1" checked/>
+                            <label class="respincorrecta bg-danger p-2" for="false @i">✘</label>
+                        </div>
+                    </div>
+                </div>
+            }
         </div>
     </div>
 </form>

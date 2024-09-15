@@ -50,14 +50,14 @@
 
 .nombreUsuario, .puntaje{
   margin: 30px;
-  font-size: 30px; /* Tamaño del texto */
-  color: #000000; /* Color del texto */
+  font-size: 30px;
+  color: #000000;
   padding: 10px;
-  border-radius: 20px; /* Esquinas redondeadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra del texto */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   display: inline-block;
-  text-transform: uppercase; /* Transforma el texto a mayúsculas */
-  letter-spacing: 2px; /* Espaciado entre letras */  
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .pregunta{
@@ -91,7 +91,12 @@
     transform: scale(1.05);
 }
 
-.opcion input[type="radio"] {
+.texto{
+  text-decoration: solid;
+  background: black;
+}
+
+.opcion input[type="radio"], .correcta input[type="radio"]{
   display: none;
 }
 
@@ -109,4 +114,13 @@
   height: 100%;
   text-align: center;
   line-height: 2.5;
+}
+
+.contenido, .enunciado{
+  border: 0px;
+  border-bottom: 2px solid black;
+}
+
+.respcorrecta, .respincorrecta{
+  border: 2px solid black;
 }
