@@ -2,7 +2,7 @@
     int sumatoria = 0;
 }
 
-<form action='@Url.Action("CrearPregunta")' style="height: 100vh; background-color:gainsboro;">
+<form action='@Url.Action("CrearPregunta", "Backoffice")' style="height: 100vh; background-color:gainsboro;">
     <div class="d-flex bg-white">
         @foreach(Categorias c in ViewBag.Categorias){
             sumatoria++;
@@ -51,12 +51,12 @@
                     </div>
                     <div class="correcta d-flex justify-content-end">
                         <div>
-                            <input type="radio" id="true @i" name="Correcta @i" value="0" checked/>
-                            <label class="respcorrecta bg-success p-2" for="true @i">✔</label>
+                            <input class="RespCorrecta" type="radio" id="true @i" name="Correcta @i" value="0" checked/>
+                            <label class="respcorrecta p-2 pe-3 ps-3" for="true @i" style="background-color: green"><b>✔</b></label>
                         </div>
                         <div class="ms-4">
-                            <input type="radio" id="false @i" name="Correcta @i" value="1" checked/>
-                            <label class="respincorrecta bg-danger p-2" for="false @i">✘</label>
+                            <input class="RespIncorrecta" type="radio" id="false @i" name="Correcta @i" value="1" checked/>
+                            <label class="respincorrecta p-2 pe-3 ps-3" for="false @i" style="background-color: red"><b>✘</b></label>
                         </div>
                     </div>
                 </div>
@@ -67,4 +67,40 @@
             <button type="submit" class="btn btn-primary bg-warning border border-warning" style="border-radius: 25px; width: 20vw; height: 7vh;">Crear Pregunta</button>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function updateStyles(groupIndex) {
+                const correctRadio = document.querySelector(`input.RespCorrecta[id^="true ${groupIndex}"]`);
+                const incorrectRadio = document.querySelector(`input.RespIncorrecta[id^="false ${groupIndex}"]`);
+                const correctLabel = document.querySelector(`label[for="true ${groupIndex}"]`);
+                const incorrectLabel = document.querySelector(`label[for="false ${groupIndex}"]`);
+
+                if (correctRadio && incorrectRadio && correctLabel && incorrectLabel) {
+                    if (correctRadio.checked) {
+                        correctLabel.classList.remove('low-brightness');
+                        incorrectLabel.classList.add('low-brightness');
+                    } else if (incorrectRadio.checked) {
+                        incorrectLabel.classList.remove('low-brightness');
+                        correctLabel.classList.add('low-brightness');
+                    }
+                }
+            }
+
+            for (let i = 0; i < 4; i++) {
+                const correctRadio = document.querySelector(`input.RespCorrecta[id^="true ${i}"]`);
+                const incorrectRadio = document.querySelector(`input.RespIncorrecta[id^="false ${i}"]`);
+
+                if (correctRadio) {
+                    correctRadio.addEventListener('change', () => updateStyles(i));
+                }
+
+                if (incorrectRadio) {
+                    incorrectRadio.addEventListener('change', () => updateStyles(i));
+                }
+
+                updateStyles(i);
+            }
+        });
+    </script>
 </form>
